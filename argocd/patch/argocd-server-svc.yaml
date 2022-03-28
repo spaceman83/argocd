@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace:argocd
+  namespace: argocd
 spec:
   externalIPs:
   - 192.168.100.20
