@@ -8,3 +8,4 @@ patches:
   - path: patch/argocd-server-svc.yaml
     target:
       kind: Service
+      name: argocd-server
