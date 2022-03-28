@@ -3,3 +3,5 @@ kind: Kustomization
 namespace: argocd
 resources:
   - https://raw.githubusercontent.com/argoproj/argo-cd/v2.1.7/manifests/install.yaml
+patchesStrategicMerge:
+  - patch/argocd-server-svc.yaml
