@@ -1,2 +1,7 @@
+
+namespace: metallb-system
+
 resources:
-- github.com/metallb/metallb//manifests?ref=v0.12.1
+  - github.com/metallb/metallb/main/manifests/namespace.yaml?ref=v0.12.1
+  - github.com/metallb/metallb/main/manifests/metallb.yaml?ref=v0.12.1
+  - config/metallb-config.yaml
