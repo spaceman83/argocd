@@ -9,8 +9,3 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: traefik-ingress-controller
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: traefik-ingress-controller
