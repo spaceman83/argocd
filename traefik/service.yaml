@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/instance: traefik
     app.kubernetes.io/name: traefik
   annotations:
-    metallb.universe.tf/address-pool: default
+    metallb.universe.tf/address-pool: public-pool
 
 spec:
   type: LoadBalancer
