@@ -1,4 +1,4 @@
-apiVersion: extensions/v1.beta1
+apiVersion: networking.k8s.io/vi
 kind: Ingress
 metadata:
   name: argocd-ui
