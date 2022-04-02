@@ -7,6 +7,8 @@ resources:
 - service-account.yaml
 - daemon-set.yaml
 
+- /ingress/argocd-ingress.yaml
+
 namespace: traefik
 
 commonLabels:
