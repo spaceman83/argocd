@@ -10,10 +10,10 @@ metadata:
 #   cert-manager.io/cluster-issuer: letsencrypt-prod
 
 spec:
-  tls:
-      - secretName: argo-tls-secret
-        hosts:
-          - argocd.k8s.lenin.nu
+        #  tls:
+        #      - secretName: argo-tls-secret
+        #        hosts:
+        #          - argocd.k8s.lenin.nu
   rules:
     - host: argocd.k8s.lenin.nu
       http:
