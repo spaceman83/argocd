@@ -11,5 +11,5 @@ configMapGenerator:
     files:
     - config/metallb-config.yaml
 
-      #generatorOptions:
-      #  - disableNameSuffixHash: true
+generatorOptions:
+  - disableNameSuffixHash: true
