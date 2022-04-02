@@ -1,11 +1,11 @@
-apiVersion: extensions/v1.Ingress
+apiVersion: extensions/v1.beta1
 kind: Ingress
 metadata:
-  name: argocd-server
+  name: argocd-ui
   namespace: argocd
-  annotations:
-   kubernetes.io/ingress.class: "traefik"
-   ingress.kubernetes.io/ssl-redirect: "false"
+  #  annotations:
+  #   kubernetes.io/ingress.class: "traefik"
+  #   ingress.kubernetes.io/ssl-redirect: "false"
    #   nginx.ingress.kubernetes.io/ssl-redirect: "false"
    #   cert-manager.io/cluster-issuer: letsencrypt-prod
 
