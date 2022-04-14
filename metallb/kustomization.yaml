@@ -12,5 +12,6 @@ configMapGenerator:
     files:
     - config/metallb-config.yaml
     - config/KubeProxyConf.yaml
+    - config/metallb-addresspool.yaml
 generatorOptions:
   disableNameSuffixHash: true
