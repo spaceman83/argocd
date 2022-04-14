@@ -4,7 +4,6 @@ namespace: metallb-system
 resources:
   - https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/namespace.yaml
   - https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/metallb.yaml
-  - config/metallb-addresspool.yaml
     #  - config/metallb-config.yaml
 
 configMapGenerator:
@@ -12,6 +11,5 @@ configMapGenerator:
     files:
     - config/metallb-config.yaml
     - config/KubeProxyConf.yaml
-    - config/metallb-addresspool.yaml
 generatorOptions:
   disableNameSuffixHash: true
