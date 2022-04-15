@@ -6,9 +6,9 @@ metadata:
 data:
   config: |
     address-pools:
-    - name: public-pool
+    - name: default
       protocol: layer2
       addresses:
-      - 192.168.100.30/32
+      - 192.168.100.30-192.168.100.40
         #      - 192.168.100.40/24
       autoassign: false
