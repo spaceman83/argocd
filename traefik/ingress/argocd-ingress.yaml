@@ -1,5 +1,5 @@
-apiVersion: networking.k8s.io/vi
-kind: Ingress
+apiVersion: traefik.containo.us/v1alpha1
+kind: Ingressroute
 metadata:
   name: argocd-ui
   namespace: argocd
