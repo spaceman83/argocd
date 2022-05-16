@@ -8,7 +8,7 @@ resources:
 - daemon-set.yaml
 - service.yaml
 
-- ingress/argocd-ingress.yaml
+  #- ingress/argocd-ingress.yaml
 
 namespace: traefik
 
