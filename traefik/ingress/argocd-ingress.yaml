@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   name: argocd-ui
   namespace: argocd
-  #  annotations:
-  #   kubernetes.io/ingress.class: "traefik"
-  #   ingress.kubernetes.io/ssl-redirect: "false"
+    annotations:
+     kubernetes.io/ingress.class: "traefik"
+     #   ingress.kubernetes.io/ssl-redirect: "false"
    #   nginx.ingress.kubernetes.io/ssl-redirect: "false"
    #   cert-manager.io/cluster-issuer: letsencrypt-prod
 
