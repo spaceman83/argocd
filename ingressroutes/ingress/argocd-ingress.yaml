@@ -21,4 +21,4 @@ spec:
           backend:
             serviceName: argocd-server
             servicePort: http
-            namespace: argocd
+            #            namespace: argocd
