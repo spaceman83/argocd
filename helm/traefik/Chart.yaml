@@ -3,6 +3,6 @@ apiVersion: v2
 dependencies: # A list of the chart requirements (optional)
   - name: traefik
     version: 10.19.5
-    appVersion:2.6.6
+    appVersion: 2.6.6
     repository: https://helm.traefik.io/traefik
 
