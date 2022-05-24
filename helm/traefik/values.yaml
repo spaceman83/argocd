@@ -156,7 +156,8 @@ service:
   labels: {}
   spec: {}
   loadBalancerSourceRanges: []
-  externalIPs: []
+  externalIPs: 
+    - 192.168.100.30
     # - 1.2.3.4
 
 autoscaling:
