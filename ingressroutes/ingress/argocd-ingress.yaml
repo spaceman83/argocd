@@ -5,10 +5,19 @@ metadata:
   namespace: argocd
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
       services:
       - name: argocd-server
         port: 80
+    - kind: Rule
+      match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
+      services:
+        - name: argocd-server
+          port: 80
+          scheme: h2c
+  tls:
+    - certResolver: default
+      optios: {}
