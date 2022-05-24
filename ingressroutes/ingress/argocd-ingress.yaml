@@ -3,7 +3,7 @@ items:
 - apiVersion: traefik.containo.us/v1alpha1
   kind: IngressRoute
   metadata:
-    name: argo-http
+    name: argocd-http
     namespace: argocd
   spec:
     entryPoints:
@@ -28,7 +28,7 @@ items:
 - apiVersion: traefik.containo.us/v1alpha1
   kind: IngressRoute
   metadata:
-    name: argo-https
+    name: argocd-https
     namespace: argocd
   spec:
     entryPoints:
