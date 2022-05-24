@@ -5,10 +5,10 @@ metadata:
   namespace: argocd
 spec:
   entryPoints:
-    - websecure
+    - web
   routes:
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
       services:
       - name: argocd-server
-        port: 443
+        port: 80
