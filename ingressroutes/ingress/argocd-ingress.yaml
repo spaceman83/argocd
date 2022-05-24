@@ -15,9 +15,6 @@ spec:
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
       services:
-        - name: argocd-server
-          port: 80
-          scheme: h2c
-  tls:
-    - certResolver: default
-      options: {}
+      - name: argocd-server
+        port: 80
+        scheme: h2c
