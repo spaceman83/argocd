@@ -21,5 +21,5 @@ maintainers:
 icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
 dependencies: # A list of the chart requirements (optional)
   - name: traefik
-    #    appVersion: 2.6.6
+    appVersion: 2.6.6
     repository: https://helm.traefik.io/traefik
