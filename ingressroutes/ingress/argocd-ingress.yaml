@@ -45,4 +45,3 @@ items:
       - name: argo-server
         port: 2746
 kind: List
-
