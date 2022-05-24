@@ -88,7 +88,7 @@ additionalVolumeMounts: []
 
 logs:
   general:
-    level: WARNING
+    level: WARN
   access:
     enabled: false
     filters: {}
