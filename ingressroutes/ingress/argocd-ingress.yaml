@@ -1,24 +1,18 @@
-apiVersion: traefik.containo.us/v1alpha1
+ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: argocd-ui
-  annotations:
-    kubernetes.io/ingress.class: "traefik"
-    ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-      #   cert-manager.io/cluster-issuer: letsencrypt-prod
-
+  namespace: argocd
 spec:
-        #  tls:
-        #      - secretName: argo-tls-secret
-        #        hosts:
-        #          - argocd.k8s.lenin.nu
-  rules:
-    - host: argocd.k8s.lenin.nu
-      http:
-        paths:
-        - path: /
-          backend:
-            serviceName: argocd-server
-            servicePort: http
-            #            namespace: argocd
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`argocd.k88s.lenin.nu`)
+      kind: Rule
+      middlewares:
+      - name: httpsredirect
+        namespace: traefik
+      services:
+      - name: argocd-server
+        port: http
+-
