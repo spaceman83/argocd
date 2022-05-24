@@ -16,6 +16,3 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: auth
-spec:
-  basicAuth:
-    secret: secretName # Kubernetes secret named "secretName"
