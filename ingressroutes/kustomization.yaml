@@ -1,4 +1,5 @@
 resources:
   - ingress/argocd-ingress.yaml
+  - ingress/traefik-ingress.yaml
 generatorOptions:
   disableNameSuffixHash: true

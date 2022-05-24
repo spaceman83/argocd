@@ -45,7 +45,7 @@ experimental:
 
 ingressRoute:
   dashboard:
-    enabled: false
+    enabled: true
     annotations: {}
     labels: {}
 
