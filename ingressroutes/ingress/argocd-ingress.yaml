@@ -11,7 +11,7 @@ items:
     routes:
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
-            middlewares:
+        middlewares:
       - name: httpsredirect
         namespace: traefik
       services:
