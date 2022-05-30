@@ -11,6 +11,7 @@ spec:
       kind: Rule
       middlewares:
       - name: httpsredirect
+        namespace: traefik
       services:
       - name: yopass-svc
         port: 8080
