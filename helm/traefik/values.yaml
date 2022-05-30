@@ -72,7 +72,9 @@ providers:
     enabled: true
     allowCrossNamespace: true
     allowExternalNameServices: false
-    namespaces: []
+    namespaces: 
+      - "tools"
+      - "argocd"
 
   kubernetesIngress:
     enabled: true
