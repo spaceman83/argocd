@@ -11,10 +11,10 @@ spec:
       kind: Rule
       middlewares:
       - name: httpsredirect
-        namespace: traefik
       services:
       - name: yopass-svc
         port: 8080
+        namespace: tools
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -32,3 +32,4 @@ spec:
       services:
         - name: yopass-svc
           port: 8080
+          namespace: tools
