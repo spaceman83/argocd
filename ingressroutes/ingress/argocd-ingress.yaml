@@ -40,8 +40,8 @@ items:
       services:
       - name: argocd-server
         port: 80
-            - kind: Rule
-              match: Host(`argocd.k8s.lenin.nu`)
-              services:
-              - name: argocd-server
-                port: 443
+    - kind: Rule
+      match: Host(`argocd.k8s.lenin.nu`)
+      services:
+      - name: argocd-server
+        port: 443
