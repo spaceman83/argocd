@@ -44,4 +44,4 @@ items:
         #      services:
         #      - name: argocd-server
         #        port: 443
-        #kind: List
+kind: List
