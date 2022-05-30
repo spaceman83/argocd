@@ -109,6 +109,7 @@ tracing: {}
 globalArguments:
   - "--global.checknewversion"
   - "--global.sendanonymoususage"
+  - "--providers.kubernetescrd.allowCrossNamespace=true"
 
 additionalArguments: []
 
