@@ -1,0 +1,8 @@
+kind: Service
+apiVersion: v1
+spec:
+  selector:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 8080

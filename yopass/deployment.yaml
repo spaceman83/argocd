@@ -1,0 +1,23 @@
+apiversion: apps/v1
+kind: Deployment
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: yopass
+          image: jhaals/yopass:11.4.3
+          args:
+            - "--memcached=yopass-memcached:11211"
+            - "--port=8080"
+          ports:
+            - name: http
+              containerport: 8080
+        - name: yopass-memcached
+          image: memcached:1.6.15
+          args:
+            - "-m 64"
+          ports:
+            - name: memcached
+              containerport: 11211
+      restartPolicy: Always
