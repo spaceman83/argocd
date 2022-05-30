@@ -70,7 +70,7 @@ livenessProbe:
 providers:
   kubernetesCRD:
     enabled: true
-    allowCrossNamespace: false
+    allowCrossNamespace: true
     allowExternalNameServices: false
     namespaces: []
 
@@ -109,7 +109,7 @@ tracing: {}
 globalArguments:
   - "--global.checknewversion"
   - "--global.sendanonymoususage"
-  - "--providers.kubernetescrd.allowCrossNamespace=true"
+    #  - "--providers.kubernetescrd.allowCrossNamespace=true"
 
 additionalArguments: []
 
