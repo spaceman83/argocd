@@ -80,7 +80,9 @@ providers:
     enabled: true
     allowExternalNameServices: false
     allowEmptyServices: false
-    namespaces: []
+    namespaces: 
+      - "tools"
+      - "argocd"
     publishedService:
       enabled: false
 
