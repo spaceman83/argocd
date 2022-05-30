@@ -75,6 +75,7 @@ providers:
     namespaces: 
       - "tools"
       - "argocd"
+      - "default"
 
   kubernetesIngress:
     enabled: true
@@ -83,6 +84,7 @@ providers:
     namespaces: 
       - "tools"
       - "argocd"
+      - "default"
     publishedService:
       enabled: false
 
