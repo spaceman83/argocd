@@ -1,5 +1,7 @@
 kind: Service
 apiVersion: v1
+metadata: 
+  name: yopass-svc
 spec:
   selector:
   type: ClusterIP
