@@ -2,5 +2,5 @@
 #kind: Kustomization
 #namespace: tools
 resources:
-  - deployment.yaml
+        #  - deployment.yaml
   - service.yaml
