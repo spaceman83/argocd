@@ -18,6 +18,7 @@ items:
       services:
       - name: argocd-server
         port: 80
+        namespace: argocd
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
       middlewares:
@@ -26,6 +27,7 @@ items:
       services:
       - name: argocd-server
         port: 443
+        namespace: argocd
 - apiVersion: traefik.containo.us/v1alpha1
   kind: IngressRoute
   metadata:
@@ -40,8 +42,10 @@ items:
       services:
       - name: argocd-server
         port: 80
+        namespace: argocd
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
       services:
       - name: argocd-server
         port: 443
+        namespace: argocd
