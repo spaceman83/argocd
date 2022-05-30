@@ -11,4 +11,4 @@ patches:
       kind: Service
       name: argocd-server
 patchesStrategicMerge:
-  - patch/argocd-cmd-params-cm-patch.yml
+        #  - patch/argocd-cmd-params-cm-patch.yml
