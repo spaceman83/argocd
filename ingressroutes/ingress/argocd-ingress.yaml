@@ -43,5 +43,5 @@ items:
       match: Host(`argocd.k8s.lenin.nu`)
       services:
       - name: argocd-server
-        port: 80
+        port: 443
 kind: List
