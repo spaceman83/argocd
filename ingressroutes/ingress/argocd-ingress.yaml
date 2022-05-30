@@ -12,17 +12,17 @@ items:
     routes:
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
-      #      middlewares:
-      #        - name: httpsredirect
-      #          namespace: traefik
+      middlewares:
+        - name: httpsredirect
+          namespace: traefik
       services:
       - name: argocd-server
         port: 80
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`)
-      #      middlewares:
-      #        - name: httpsredirect
-      #          namespace: traefik
+      middlewares:
+        - name: httpsredirect
+          namespace: traefik
       services:
       - name: argocd-server
         port: 443
