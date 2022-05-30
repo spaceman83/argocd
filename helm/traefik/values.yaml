@@ -126,8 +126,6 @@ envFrom: []
 ports:
   traefik:
     port: 9000
-
-
     expose: true
     exposedPort: 9000
     protocol: TCP
