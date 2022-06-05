@@ -27,9 +27,9 @@ spec:
   tls:
     secretName: 
   routes:
-    - match: Host(`yopass.k8s.lenin.nu`)
-      kind: Rule
-      services:
-        - name: yopass-svc
-          port: 8080
-          namespace: tools
+  - match: Host(`yopass.k8s.lenin.nu`)
+    kind: Rule
+    services:
+    - name: yopass-svc
+      port: 8080
+      namespace: tools
