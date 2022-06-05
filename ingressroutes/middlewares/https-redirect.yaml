@@ -15,12 +15,3 @@ metadata:
 spec:
   redirectScheme:
     scheme: https
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: httpsredirect
-  namespace: argocd
-spec:
-  redirectScheme:
-    scheme: https
