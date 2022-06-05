@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   selector:
-    app.kubernetes.io/name: Argocd2
+    app.kubernetes.io/name: argocd-server
   externalIPs:
     - 192.168.100.21
   ports:
