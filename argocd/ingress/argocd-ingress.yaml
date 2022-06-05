@@ -7,27 +7,29 @@ spec:
   entryPoints:
   - web
   routes:
-  - kind: Rule
-    match: Host(`argocd.k8s.lenin.nu`)
+  - match: Host(`argocd.k8s.lenin.nu`) 
+    kind: Rule
     middlewares:
       - name: httpsredirect
     services:
     - name: argocd-server
       port: 80
       namespace: argocd
-#---
-#apiVersion: traefik.containo.us/v1alpha1
-#kind: IngressRoute
-#metadata:
-#  name: argocd-https
-#  namespace: argocd
-#spec:
-#  entryPoints:
-#  - websecure
-#  routes:
-#  - kind: Rule
-#    match: Host(`argocd.k8s.lenin.nu`)
-#    services:
-#    - name: argocd-server
-#      port: 80
-# namespace: argocd
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: argocd-https
+  namespace: argocd
+spec:
+  entryPoints:
+  - websecure
+  tls:
+    secretName:
+  routes:
+  - match: Host(`argocd.k8s.lenin.nu`)
+    kind: Rule
+    services:
+    - name: argocd-server
+      port: 80
+      namespace: argocd
