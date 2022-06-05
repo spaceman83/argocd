@@ -14,7 +14,6 @@ items:
       match: Host(`argocd.k8s.lenin.nu`)
       middlewares:
         - name: httpsredirect
-          namespace: traefik
       services:
       - name: argocd-server
         port: 80
@@ -23,7 +22,6 @@ items:
       match: Host(`argocd.k8s.lenin.nu`)
       middlewares:
         - name: httpsredirect
-          namespace: traefik
       services:
       - name: argocd-server
         port: 443
