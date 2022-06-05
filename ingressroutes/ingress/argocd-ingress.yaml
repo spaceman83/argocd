@@ -29,5 +29,5 @@ spec:
     match: Host(`argocd.k8s.lenin.nu`)
     services:
     - name: argocd-server
-      port: 443
+      port: 80
       namespace: argocd
