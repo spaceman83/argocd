@@ -9,8 +9,8 @@ spec:
   routes:
   - kind: Rule
     match: Host(`argocd.k8s.lenin.nu`)
-    middlewares:
-      - name: httpsredirect
+#    middlewares:
+#      - name: httpsredirect
     services:
     - name: argocd-server
       port: 80
