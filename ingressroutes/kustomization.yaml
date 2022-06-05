@@ -1,6 +1,6 @@
 resources:
 # INGRESSROUTES
-  - ingress/argocd-ingress.yaml
+#  - ingress/argocd-ingress.yaml
 #  - ingress/traefik-ingress.yaml
   - ingress/yopass-ingress.yaml
 
