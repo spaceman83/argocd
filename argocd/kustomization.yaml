@@ -6,5 +6,6 @@ resources:
         #  - base/install.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/v2.3.3/manifests/install.yaml
   - service/argocd-rescue.yaml
+  - ingress/argocd-ingress.yaml
 patchesStrategicMerge:
   - patch/argocd-cmd-params-cm-patch.yml
