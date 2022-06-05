@@ -6,10 +6,5 @@ resources:
         #  - base/install.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/v2.3.3/manifests/install.yaml
   - service/argocd-rescue.yaml
-patches:
-  - path: patch/argocd-server-svc.yaml
-    target:
-      kind: Service
-      name: argocd-server
 patchesStrategicMerge:
         #  - patch/argocd-cmd-params-cm-patch.yml
