@@ -1,6 +1,12 @@
 resources:
+# INGRESSROUTES
   - ingress/argocd-ingress.yaml
-    #  - ingress/traefik-ingress.yaml
+#  - ingress/traefik-ingress.yaml
   - ingress/yopass-ingress.yaml
+
+# MIDDLEWARES
+
+  - middlewares/https-redirect.yaml
+
 generatorOptions:
   disableNameSuffixHash: true
