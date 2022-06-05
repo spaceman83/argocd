@@ -4,3 +4,5 @@ namespace: tools
 resources:
   - deployment.yaml
   - service.yaml
+  - ingress/middleware.yaml
+  - ingress/yopass-ingress.yaml
