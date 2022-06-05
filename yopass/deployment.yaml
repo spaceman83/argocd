@@ -21,11 +21,11 @@ spec:
         ports:
         - name: http
           containerPort: 8080
-        - name: yopass-memcached
-          image: memcached:1.6.15
-          args:
-          - "-m 64"
-          ports:
-          - name: memcached
-            containerPort: 11211
+      - name: yopass-memcached
+        image: memcached:1.6.15
+        args:
+        - "-m 64"
+        ports:
+        - name: memcached
+          containerPort: 11211
       restartPolicy: Always
