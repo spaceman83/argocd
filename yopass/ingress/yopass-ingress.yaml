@@ -15,21 +15,21 @@ spec:
       - name: yopass-svc
         port: 8080
         namespace: tools
-#---
-#apiVersion: traefik.containo.us/v1alpha1
-#kind: IngressRoute
-#metadata:
-#  name: yopass-https
-#  namespace: tools
-#spec:
-#  entryPoints:
-#    - websecure
-#  tls:
-#    secretName: 
-#  routes:
-#    - match: Host(`yopass.k8s.lenin.nu`)
-#      kind: Rule
-#      services:
-#        - name: yopass-svc
-#          port: 8080
-#          namespace: tools
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: yopass-https
+  namespace: tools
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: 
+  routes:
+    - match: Host(`yopass.k8s.lenin.nu`)
+      kind: Rule
+      services:
+        - name: yopass-svc
+          port: 8080
+          namespace: tools
