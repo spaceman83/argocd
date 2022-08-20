@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/traefik-v2.json": "file:///c%3A/Users/linus/OneDrive/Documents/Codez/argocd/monitoring/ingress/middleware.yaml",
+        "kubernetes://schema/v1@service": "file:///c%3A/Users/linus/OneDrive/Documents/Codez/argocd/yopass/service.yaml"
+    }
+}
