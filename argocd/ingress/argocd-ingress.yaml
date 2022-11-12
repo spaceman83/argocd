@@ -24,12 +24,20 @@ metadata:
 spec:
   entryPoints:
   - websecure
-  tls:
-    secretName:
   routes:
-  - match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
-    kind: Rule
+  - kind: Rule
+    match: Host(`argocd.k8s.lenin.nu`)
+    priority: 10
     services:
-    - name: argocd-server
-      port: 80
-      namespace: argocd
+    - kind: Service
+      name: argocd-server
+      port: http
+  - kind: Rule
+    match: >-
+      Host(`argocd.k8s.lenin.nu`) &&
+      Headers(`Content-Type`, `application/grpc`)
+    priority: 11
+    services:
+    - kind: Service
+      name: argocd-server
+      port: http
