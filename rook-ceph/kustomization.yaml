@@ -8,3 +8,4 @@ resources:
   - base/cluster.yaml
   - base/storageclass.yaml
   - base/blockpool.yaml
+  - base/toolbox.yaml
