@@ -17,7 +17,6 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/name: yopass-memcached
-  type: ClusterIP
   ports:
     - name: memcached
       port: 11211
