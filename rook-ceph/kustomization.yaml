@@ -6,3 +6,4 @@ resources:
   - base/crds.yaml
   - base/operator.yaml
   - base/cluster.yaml
+  - base/storageclass.yaml
