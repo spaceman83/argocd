@@ -6,7 +6,7 @@ resources:
 #  - https://raw.githubusercontent.com/metallb/metallb/v0.13.7/manifests/metallb.yaml
   - github.com/metallb/metallb/config/native?ref=v0.13.7
 
-  - config/configmap.yaml
+#  - config/configmap.yaml
   - config/pool.yaml
 generatorOptions:
   disableNameSuffixHash: true
