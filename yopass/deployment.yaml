@@ -33,7 +33,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yopass
+  name: yopass-memcached
 spec:
   replicas: 1
   selector:
