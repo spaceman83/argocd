@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
       - name: yopass-memcached
-        image: memcached:1.6.16
+        image: memcached:1.6.17-alpine
         args:
         - "-m 64"
         ports:
