@@ -19,7 +19,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd-server
+  name: argocd-https
   namespace: argocd
 spec:
   entryPoints:
