@@ -27,9 +27,9 @@ spec:
   tls:
     secretName:
   routes:
-  - match: Host(`argocd.k8s.lenin.nu`)
+  - match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
     kind: Rule
     services:
     - name: argocd-server
-      port: 443
+      port: 80
       namespace: argocd
