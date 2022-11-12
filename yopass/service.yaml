@@ -9,3 +9,15 @@ spec:
   ports:
     - name: http
       port: 8080
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: yopass-memcached
+spec:
+  selector:
+    app.kubernetes.io/name: yopass-memcached
+  type: ClusterIP
+  ports:
+    - name: tcp
+      port: 11211
