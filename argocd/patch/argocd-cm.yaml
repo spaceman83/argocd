@@ -8,15 +8,15 @@ metadata:
 data:
   server.insecure: "true"
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: argocd-cm
-  namespace: argocd
-  labels:
-    app.kubernetes.io/name: argocd-cm
-    app.kubernetes.io/part-of: argocd
-data:
-  exec.enabled: "true"
-  exec.shells: "bash,sh,powershell,cmd"
-  oidc.tls.insecure.skip.verify: "false"
+#apiVersion: v1
+#kind: ConfigMap
+#metadata:
+  #name: argocd-cm
+  #namespace: argocd
+  #labels:
+    #app.kubernetes.io/name: argocd-cm
+    #app.kubernetes.io/part-of: argocd
+#data:
+  #exec.enabled: "true"
+  #exec.shells: "bash,sh,powershell,cmd"
+  #oidc.tls.insecure.skip.verify: "false"
