@@ -4,5 +4,5 @@ version: 1.0.0
 dependencies: # A list of the chart requirements (optional)
   - name: traefik
     version: 10.24.0
-    appVersion: 2.8.0
+    appVersion: 2.9.4
     repository: https://helm.traefik.io/traefik
