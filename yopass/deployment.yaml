@@ -36,10 +36,10 @@ spec:
         - name: memcached
           containerPort: 11211
         resources: 
-        limits:
-          cpu: 100m
-          memory: 50Mi
-        requests:
-          cpu: 100m
-          memory: 50Mi
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
       restartPolicy: Always
