@@ -8,3 +8,4 @@ resources:
   - ingress/middleware.yaml
 patchesStrategicMerge:
   - patch/argocd-cm.yaml
+  - patch/argocd-clusterrole.yaml
