@@ -28,6 +28,23 @@ spec:
           requests:
             cpu: 100m
             memory: 50Mi
+      restartPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yopass
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: yopass-memcached
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: yopass-memcached
+    spec:
+      containers:
       - name: yopass-memcached
         image: memcached:1.6.16
         args:
