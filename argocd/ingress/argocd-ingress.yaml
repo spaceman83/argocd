@@ -31,7 +31,7 @@ spec:
     services:
     - kind: Service
       name: argocd-server
-      port: http
+      port: 80
   - kind: Rule
     match: >-
       Host(`argocd.k8s.lenin.nu`) &&
@@ -40,4 +40,4 @@ spec:
     services:
     - kind: Service
       name: argocd-server
-      port: http
+      port: 80
