@@ -7,4 +7,4 @@ resources:
   - ingress/argocd-ingress.yaml
   - ingress/middleware.yaml
 patchesStrategicMerge:
-  - argocd-cm.yml
+  - patches/argocd-cm.yaml
