@@ -13,7 +13,7 @@ spec:
       - name: httpsredirect
     services:
     - name: argocd-server
-      port: 80
+      port: 8080
       namespace: argocd
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -30,13 +30,13 @@ spec:
       priority: 10
       services:
         - name: argocd-server
-          port: 80
+          port: 8080
     - kind: Rule
       match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
       priority: 11
       services:
         - name: argocd-server
-          port: 80
+          port: 8080
           scheme: h2c
   tls:
     certResolver: default
