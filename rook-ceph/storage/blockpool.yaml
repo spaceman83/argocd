@@ -7,4 +7,3 @@ spec:
   failureDomain: host
   replicated:
     size: 2
-    codingChunks: 1
