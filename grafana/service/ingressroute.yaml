@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: prometheus-http
+  name: grafana-http
   namespace: tools
 spec:
   entryPoints:
@@ -19,7 +19,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: prometheus-https
+  name: grafana-https
   namespace: tools
 spec:
   entryPoints:
