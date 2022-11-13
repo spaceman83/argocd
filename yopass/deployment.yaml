@@ -70,6 +70,6 @@ spec:
       restartPolicy: Always
       volumes:
       - name: data
-        persistantVolumeClaim:
+        persistentVolumeClaim:
           claimName: yopass-redis-pvc
   revisionHistoryLimit: 2
