@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: yopass-redis
+spec:
+  selector:
+    app.kubernetes.io/name: yopass-redis
+  ports:
+    - name: redis
+      port: 6379

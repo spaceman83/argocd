@@ -2,8 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: tools
 resources:
-  - deployment.yaml
-  - service.yaml
+  - redis/redis-pvc.yaml
+  - redis/service.yaml
+  - yopass/service.yaml
   - ingress/middleware.yaml
   - ingress/yopass-ingress.yaml
-  - redis/redis-pvc.yaml
+  - yopass/deployment.yaml
+  - redis/deployment.yaml
