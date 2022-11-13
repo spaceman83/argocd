@@ -12,7 +12,7 @@ spec:
       middlewares:
       - name: httpsredirect
       services:
-      - name: https-dashboard
+      - name: rook-ceph-mgr-dashboard
         port: 8443
         namespace: rook-ceph
 ---
@@ -30,6 +30,6 @@ spec:
   - match: Host(`ceph.k8s.lenin.nu`)
     kind: Rule
     services:
-    - name: https-dashboard
+    - name: rook-ceph-mgr-dashboard
       port: 8443
       namespace: rook-ceph
