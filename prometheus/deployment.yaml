@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: prometheus-deployment
   namespace: tools
-  labels:
-    app.kubernetes.io/name: prometheus-server
 spec:
   replicas: 1
   selector:
