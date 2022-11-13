@@ -30,6 +30,7 @@ spec:
             cpu: 100m
             memory: 50Mi
       restartPolicy: Always
+  revisionHistoryLimit: 2
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -64,3 +65,4 @@ spec:
             cpu: 100m
             memory: 50Mi
       restartPolicy: Always
+  revisionHistoryLimit: 2
