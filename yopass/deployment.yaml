@@ -17,7 +17,7 @@ spec:
         image: jhaals/yopass:11.4.6
         args:
           - "--database=redis"
-          - "--redis=yopass-redis://redis:6379/0"
+          - "--redis=redis://redis:6379/0"
           - "--port=8080"
         ports:
         - name: http
