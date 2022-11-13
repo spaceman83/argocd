@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: prometheus-server
+        app: prometheus-server:v2.40.1
     spec:
       containers:
         - name: prometheus
