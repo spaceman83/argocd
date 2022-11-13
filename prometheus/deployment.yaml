@@ -34,10 +34,12 @@ spec:
           volumeMounts:
             - name: prometheus-config-volume
               mountPath: /etc/prometheus/
+              securityContext:
+                fsGroup: 65534
             - name: prometheus-storage-volume
               mountPath: /prometheus/
-          securityContext:
-            fsGroup: 65534 
+              securityContext:
+                fsGroup: 65534
       volumes:
         - name: prometheus-config-volume
           configMap:
