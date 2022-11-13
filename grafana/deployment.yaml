@@ -30,14 +30,17 @@ spec:
         volumeMounts:
           - mountPath: /var/lib/grafana
             name: grafana-storage
-#          - mountPath: /etc/grafana/provisioning/datasources
-#            name: grafana-datasources
-#            readOnly: false
+      initContainers:
+      - name: change-ownership-container
+        image: busybox
+        command: ["/bin/chmod","-R","777", "/var/lib/grafana"]
+        securityContext:
+          runAsUser: 0
+          privileged: true
+        volumeMounts:
+          - mountPath: /var/lib/grafana
+            name: grafana-storage
       volumes:
         - name: grafana-storage
           persistentVolumeClaim:
             claimName: grafana-storage-pvc
-#        - name: grafana-datasources
-#          configMap:
-#              defaultMode: 420
-#              name: grafana-datasources
