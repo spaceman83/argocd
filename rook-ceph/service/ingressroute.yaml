@@ -13,7 +13,7 @@ spec:
       - name: httpsredirect
       services:
       - name: rook-ceph-mgr-dashboard
-        port: 8443
+        port: 8080
         namespace: rook-ceph
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -31,5 +31,5 @@ spec:
     kind: Rule
     services:
     - name: rook-ceph-mgr-dashboard
-      port: 8443
+      port: 8080
       namespace: rook-ceph
