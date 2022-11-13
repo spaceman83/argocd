@@ -13,17 +13,6 @@ spec:
 kind: Service
 apiVersion: v1
 metadata: 
-  name: yopass-memcached
-spec:
-  selector:
-    app.kubernetes.io/name: yopass-memcached
-  ports:
-    - name: memcached
-      port: 11211
----
-kind: Service
-apiVersion: v1
-metadata: 
   name: yopass-redis
 spec:
   selector:
