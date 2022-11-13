@@ -44,4 +44,4 @@ spec:
         - name: prometheus-storage-volume
           persistentVolumeClaim:
             claimName: prometheus-data-pvc
-      revisionHistoryLimit: 1
+  revisionHistoryLimit: 1
