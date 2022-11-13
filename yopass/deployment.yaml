@@ -64,5 +64,12 @@ spec:
           requests:
             cpu: 100m
             memory: 50Mi
+        volumeMounts: 
+          - name: redis-data
+            mountPath: /data
       restartPolicy: Always
+      volumes:
+      - name: data
+        persistantVolumeClaim:
+          claimName: yopass-redis-pvc
   revisionHistoryLimit: 2
