@@ -10,3 +10,4 @@ resources:
   - storage/blockpool.yaml
   - addons/toolbox.yaml
   - service/ingressroute.yaml
+  - service/middleware.yaml
