@@ -13,11 +13,11 @@ spec:
   template:
     metadata:
       labels:
-        app: prometheus-server:v2.40.1
+        app: prometheus-server
     spec:
       containers:
         - name: prometheus
-          image: prom/prometheus
+          image: prom/prometheus:v2.40.1
           args:
             - "--storage.tsdb.retention.time=180d"
             - "--config.file=/etc/prometheus/prometheus.yml"
