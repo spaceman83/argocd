@@ -69,7 +69,7 @@ spec:
             mountPath: /data
       restartPolicy: Always
       volumes:
-      - name: data
+      - name: redis-data
         persistentVolumeClaim:
           claimName: yopass-redis-pvc
   revisionHistoryLimit: 2
