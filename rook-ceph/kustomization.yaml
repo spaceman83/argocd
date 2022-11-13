@@ -9,3 +9,4 @@ resources:
   - storage/storageclass.yaml
   - storage/blockpool.yaml
   - addons/toolbox.yaml
+  - service/ingressroute.yaml

@@ -1,0 +1,35 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cephdash-http
+  namespace: rook-ceph
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`ceph.k8s.lenin.nu`)
+      kind: Rule
+      middlewares:
+      - name: httpsredirect
+      services:
+      - name: https-dashboard
+        port: 8443
+        namespace: rook-ceph
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cephdash-https
+  namespace: rook-ceph
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: 
+  routes:
+  - match: Host(`ceph.k8s.lenin.nu`)
+    kind: Rule
+    services:
+    - name: https-dashboard
+      port: 8443
+      namespace: rook-ceph
