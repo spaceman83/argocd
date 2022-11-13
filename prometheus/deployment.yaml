@@ -4,16 +4,16 @@ metadata:
   name: prometheus-deployment
   namespace: tools
   labels:
-    app: prometheus-server
+    app.kubernetes.io/name: prometheus-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: prometheus-server
+      app.kubernetes.io/name: prometheus-server
   template:
     metadata:
       labels:
-        app: prometheus-server
+        app.kubernetes.io/name: prometheus-server
     spec:
       containers:
         - name: prometheus
