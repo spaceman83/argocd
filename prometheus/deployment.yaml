@@ -14,7 +14,7 @@ spec:
         app.kubernetes.io/name: prometheus-server
     spec:
       containers:
-        - name: prometheus
+        - name: prometheus-server
           image: prom/prometheus:v2.40.1
           args:
             - "--storage.tsdb.retention.time=180d"
