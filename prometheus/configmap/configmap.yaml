@@ -10,13 +10,13 @@ data:
     groups:
     - name: devopscube demo alert
       rules:
-      - alert: High Pod Memory
-        expr: sum(container_memory_usage_bytes) > 1
-        for: 1m
-        labels:
-          severity: slack
-        annotations:
-          summary: High Memory Usage
+#      - alert: High Pod Memory
+#        expr: sum(container_memory_usage_bytes) > 1
+#        for: 1m
+#        labels:
+#          severity: slack
+#        annotations:
+#          summary: High Memory Usage
   prometheus.yml: |-
     global:
       scrape_interval: 30s
