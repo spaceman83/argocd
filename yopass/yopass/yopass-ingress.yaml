@@ -13,7 +13,7 @@ spec:
       - name: httpsredirect
       services:
       - name: yopass-svc
-        port: 8080
+        port: 1337
         namespace: tools
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -31,5 +31,5 @@ spec:
     kind: Rule
     services:
     - name: yopass-svc
-      port: 8080
+      port: 1337
       namespace: tools
