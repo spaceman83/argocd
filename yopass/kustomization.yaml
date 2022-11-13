@@ -5,7 +5,7 @@ resources:
   - redis/redis-pvc.yaml
   - redis/service.yaml
   - yopass/service.yaml
-  - ingress/middleware.yaml
-  - ingress/yopass-ingress.yaml
+  - yopass/middleware.yaml
+  - yopass/yopass-ingress.yaml
   - yopass/deployment.yaml
   - redis/deployment.yaml
