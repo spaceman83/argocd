@@ -38,4 +38,4 @@ spec:
       - name: redis-data
         persistentVolumeClaim:
           claimName: yopass-redis-pvc
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 1
