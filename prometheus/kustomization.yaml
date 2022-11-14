@@ -8,5 +8,6 @@ resources:
 
 configMapGenerator:
   - name: prometheus-server-conf-shortterm
+    namespace: tools
     files:
     - configmap/prometheus-shortterm.yaml
