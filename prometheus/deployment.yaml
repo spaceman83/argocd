@@ -31,7 +31,8 @@ spec:
               memory: 1Gi
           volumeMounts:
             - name: prometheus-config-volume
-              mountPath: /etc/prometheus/prometheus.yml
+              mountPath: /etc/prometheus/
+              subPath: prometheus.yml
             - name: prometheus-storage-volume
               mountPath: /prometheus/
       initContainers:
