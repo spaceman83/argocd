@@ -5,3 +5,8 @@ resources:
  - configmap/configmap-shortterm.yaml
  - service/service.yaml
  - service/ingressroute.yaml
+
+configMapGenerator:
+  - name: prometheus-server-conf-shortterm
+    files:
+    - configmap/prometheus-shortterm.yaml
