@@ -9,3 +9,6 @@ configMapGenerator:
   - name: prometheus-server-conf-shortterm
     files:
     - configmap/prometheus-shortterm.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
