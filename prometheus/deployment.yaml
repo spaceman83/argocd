@@ -50,6 +50,6 @@ spec:
             defaultMode: 420
             name: prometheus-server-conf
         - name: prometheus-storage-volume
-          persistentVolumeClaim:
-            claimName: prometheus-data-pvc
+          emptyDir:
+            sizeLimit: 500Mi
   revisionHistoryLimit: 1
