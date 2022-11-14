@@ -2,12 +2,10 @@ resources:
  - deployment.yaml
  - crb/crb.yaml
 # - pvc/pvc.yaml
- - configmap/configmap-shortterm.yaml
  - service/service.yaml
  - service/ingressroute.yaml
 
 configMapGenerator:
   - name: prometheus-server-conf-shortterm
-    namespace: tools
     files:
     - configmap/prometheus-shortterm.yaml
