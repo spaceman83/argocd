@@ -20,7 +20,7 @@ spec:
           containerPort: 9272
         envFrom:
         - configMapRef:
-          name: vcenter-exporter-env
+            name: vcenter-exporter-env
         resources: 
           limits:
             cpu: 100m
