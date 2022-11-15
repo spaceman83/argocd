@@ -1,7 +1,7 @@
 resources:
  - deployment.yaml
  - crb/crb.yaml
-# - pvc/pvc.yaml
+ - pvc/pvc.yaml
  - service/service.yaml
  - service/ingressroute.yaml
 
