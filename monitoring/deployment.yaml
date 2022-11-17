@@ -107,6 +107,6 @@ spec:
     spec:
       containers:
       - name: exporter-troubleshooter
-        image: abash:alpine3.16
+        image: bash:alpine3.16
       restartPolicy: Always
   revisionHistoryLimit: 1
