@@ -123,8 +123,8 @@ spec:
             cpu: 100m
             memory: 50Mi
       restartPolicy: Always
-    volumes:
-    - name: ping-exporter-conf
-      configMap:
-        name: ping-exporter-conf
+      volumes:
+      - name: ping-exporter-conf
+        configMap:
+          name: ping-exporter-conf
   revisionHistoryLimit: 1
