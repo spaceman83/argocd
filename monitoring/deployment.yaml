@@ -106,7 +106,17 @@ spec:
         app.kubernetes.io/name: exporter-troubleshooter
     spec:
       containers:
-      - name: exporter-troubleshooter
-        image: bash:alpine3.16
+      - name: ubuntu
+        image: ubuntu
+        ports:
+        - name: http
+          containerPort: 9100
+        resources: 
+          limits:
+            cpu: 1000m
+            memory: 5000Mi
+          requests:
+            cpu: 1000m
+            memory: 5000Mi
       restartPolicy: Always
   revisionHistoryLimit: 1
