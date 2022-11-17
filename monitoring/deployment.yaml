@@ -90,3 +90,30 @@ spec:
             memory: 50Mi
       restartPolicy: Always
   revisionHistoryLimit: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exporter-troubleshooter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: exporter-troubleshooter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: exporter-troubleshooter
+    spec:
+      containers:
+      - name: exporter-troubleshooter
+        image: ubuntu:latest
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+      restartPolicy: Always
+  revisionHistoryLimit: 1
