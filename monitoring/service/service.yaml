@@ -9,3 +9,27 @@ spec:
   ports:
     - name: http
       port: 9272
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: snmp-exporter-svc
+spec:
+  selector:
+    app.kubernetes.io/name: snmp-exporter
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 9116
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: node-exporter-svc
+spec:
+  selector:
+    app.kubernetes.io/name: node-exporter
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 9100
