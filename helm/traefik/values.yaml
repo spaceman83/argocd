@@ -188,6 +188,8 @@ providers:
       # Published Kubernetes Service to copy status from. Format: namespace/servicename
       # By default this Traefik service
       # pathOverride: ""
+    ingressEndpoint:
+      ip: 192.168.100.22
 
 #
 # Add volumes to the traefik pod. The volume name will be passed to tpl.
