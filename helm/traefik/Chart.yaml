@@ -1,5 +1,3 @@
-apiVersion: v3
-name: traefik
 project: default
 source:
   repoURL: 'https://traefik.github.io/charts'
@@ -8,3 +6,6 @@ source:
     valueFiles:
       - values.yaml
   chart: traefik
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: traefik
