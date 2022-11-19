@@ -550,14 +550,15 @@ service:
   labels: {}
   # Additional entries here will be added to the service spec.
   # Cannot contain type, selector or ports entries.
-  spec: {}
+  spec: {
     # externalTrafficPolicy: Cluster
-    # loadBalancerIP: "192.168.100.22"
+    loadBalancerIP: [192.168.100.22]
     # clusterIP: "2.3.4.5"
+    }
   loadBalancerSourceRanges: []
     # - 192.168.0.1/32
     # - 172.16.0.0/16
-  externalIPs: [192.168.100.22]
+  externalIPs: []
   ## One of SingleStack, PreferDualStack, or RequireDualStack.
   # ipFamilyPolicy: SingleStack
   ## List of IP families (e.g. IPv4 and/or IPv6).
