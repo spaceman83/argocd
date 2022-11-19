@@ -554,7 +554,7 @@ service:
   # Additional entries here will be added to the service spec.
   # Cannot contain type, selector or ports entries.
   spec: 
-    # externalTrafficPolicy: cluster
+    externalTrafficPolicy: Local
     loadBalancerIP: 192.168.100.22
     # clusterIP: "2.3.4.5"
   #loadBalancerSourceRanges: {}
