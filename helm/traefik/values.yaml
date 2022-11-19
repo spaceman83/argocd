@@ -188,8 +188,6 @@ providers:
       # Published Kubernetes Service to copy status from. Format: namespace/servicename
       # By default this Traefik service
       # pathOverride: ""
-    ingressEndpoint:
-      ip: 192.168.100.22
 
 #
 # Add volumes to the traefik pod. The volume name will be passed to tpl.
@@ -444,11 +442,6 @@ ports:
     # proxyProtocol:
     #   trustedIPs: []
     #   insecure: false
-  web2:
-    port: 8444
-    expose: true
-    exposedPort: 8444
-    protocol: TCP
   websecure:
     port: 8443
     # hostPort: 8443
@@ -475,8 +468,7 @@ ports:
       # this is the name of a TLSOption definition
       options: ""
       certResolver: ""
-      domains: 
-        - main: "*.k8s.lenin.nu"
+      domains: []
       # - main: example.com
       #   sans:
       #     - foo.example.com
@@ -558,12 +550,15 @@ service:
   labels: {}
   # Additional entries here will be added to the service spec.
   # Cannot contain type, selector or ports entries.
-  spec: 
-    externalTrafficPolicy: Local
-    loadBalancerIP: 192.168.100.22
+  spec: {}
+    # externalTrafficPolicy: Cluster
+    # loadBalancerIP: "1.2.3.4"
     # clusterIP: "2.3.4.5"
-  #loadBalancerSourceRanges: {}
-  #externalIPs: {}
+  loadBalancerSourceRanges: []
+    # - 192.168.0.1/32
+    # - 172.16.0.0/16
+  externalIPs: []
+    # - 1.2.3.4
   ## One of SingleStack, PreferDualStack, or RequireDualStack.
   # ipFamilyPolicy: SingleStack
   ## List of IP families (e.g. IPv4 and/or IPv6).
