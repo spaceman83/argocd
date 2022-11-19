@@ -11,7 +11,7 @@ spec:
       middlewares:
       - name: httpsredirect
       services:
-      - name: harbor-chartmuseum
+      - name: harbor-portal
         port: 80
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -27,5 +27,5 @@ spec:
   - match: Host(`harbor.k8s.lenin.nu`)
     kind: Rule
     services:
-    - name: harbor-chartmuseum
+    - name: harbor-portal
       port: 80
