@@ -5,7 +5,7 @@ dependencies: # A list of the chart requirements (optional)
   - name: traefik
     version: 20.3.0
     repository: https://helm.traefik.io/traefik
-    import-values: values.yaml
+#    import-values: values.yaml
 
 #apiVersion: v2
 #name: traefik
