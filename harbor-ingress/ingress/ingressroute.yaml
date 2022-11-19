@@ -1,0 +1,31 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: harbor-http
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`harbor.k8s.lenin.nu`)
+      kind: Rule
+      middlewares:
+      - name: httpsredirect
+      services:
+      - name: harbor-chartmuseum
+        port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: harbor-https
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: 
+  routes:
+  - match: Host(`harbor.k8s.lenin.nu`)
+    kind: Rule
+    services:
+    - name: harbor-chartmuseum
+      port: 80
