@@ -25,7 +25,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: 
+    secretName: wild-lenin-nu
   routes:
   - match: Host(`yopass.k8s.lenin.nu`)
     kind: Rule
