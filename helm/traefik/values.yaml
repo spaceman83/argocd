@@ -543,6 +543,7 @@ service:
   ## When set to false, it will create two Service, one for TCP and one for UDP.
   single: true
   type: LoadBalancer
+  allocateLoadBalancerNodePorts: false
   loadBalancerIP: 192.168.100.22
   # Additional annotations applied to both TCP and UDP services (e.g. for cloud provider specific config)
   annotations: {}
