@@ -444,6 +444,11 @@ ports:
     # proxyProtocol:
     #   trustedIPs: []
     #   insecure: false
+  web2:
+    port: 8444
+    expose: true
+    exposedPort: 8444
+    protocol: TCP
   websecure:
     port: 8443
     # hostPort: 8443
