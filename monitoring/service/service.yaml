@@ -57,3 +57,15 @@ spec:
   ports:
     - name: http
       port: 9469
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: pihole-exporter-svc
+spec:
+  selector:
+    app.kubernetes.io/name: pihole-exporter
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 9617
