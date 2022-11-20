@@ -147,7 +147,7 @@ spec:
       - name: script-exporter
         image: ricoberger/script_exporter:master
         args:
-          - "-config.file=/bin/config/config.yml"
+          - "-config.file=/bin/config/config.yaml"
           - "-web.listen-address=:9469"
         ports:
         - name: http
