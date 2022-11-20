@@ -146,6 +146,9 @@ spec:
       containers:
       - name: script-exporter
         image: ricoberger/script_exporter:master
+        args:
+          - "-config.file=/bin/config/config.yml"
+          - "-web.listen-address=:9469"
         ports:
         - name: http
           containerPort: 9469
