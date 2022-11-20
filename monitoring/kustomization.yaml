@@ -6,3 +6,11 @@ resources:
 
   - deployment.yaml
   - service/service.yaml
+
+configMapGenerator:
+  - name: script_exporter_config
+    files:
+    - script_exporter/config.yml
+  - name: script_exporter_script1
+    files:
+    - script_exporter/script1.sh
