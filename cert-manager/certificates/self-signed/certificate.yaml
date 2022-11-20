@@ -4,7 +4,10 @@ metadata:
   name: selfsigned-cert
 spec:
   dnsNames:
+    - "k8s.lenin.nu"
     - "*.k8s.lenin.nu"
-  secretName: selfsigned-cert-tls
+  secretName: selfsigned-cert-secret
   issuerRef:
     name: test-selfsigned
+  privateKey:
+    rotationPolicy: Always
