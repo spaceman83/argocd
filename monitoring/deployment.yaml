@@ -167,8 +167,8 @@ spec:
       volumes:
       - name: script-exporter-conf
         configMap:
-          name: script_exporter_config
+          name: script-exporter-config
       - name: script-exporter-script1
         configMap:
-          name: script_exporter_script1
+          name: script-exporter-script1
   revisionHistoryLimit: 1

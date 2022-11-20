@@ -8,10 +8,10 @@ resources:
   - service/service.yaml
 
 configMapGenerator:
-  - name: script_exporter_config
+  - name: script-exporter-config
     files:
     - script_exporter/config.yml
-  - name: script_exporter_script1
+  - name: script-exporter-script1
     files:
     - script_exporter/script1.sh
 
