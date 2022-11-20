@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata: 
+  name: selfsigned-cert
+spec:
+  dnsNames:
+    - "k8s.lenin.nu"
+    - "*.k8s.lenin.nu"
+  secretName: selfsigned-cert-secret
+  namespace: traefik
+  issuerRef:
+    name: test-selfsigned
+  privateKey:
+    rotationPolicy: Always
