@@ -14,3 +14,7 @@ configMapGenerator:
   - name: script_exporter_script1
     files:
     - script_exporter/script1.sh
+
+
+generatorOptions:
+  disableNameSuffixHash: true
