@@ -10,7 +10,7 @@ resources:
 configMapGenerator:
   - name: script-exporter-config
     files:
-    - script_exporter/config.yml
+    - script_exporter/config.yaml
   - name: script-exporter-script1
     files:
     - script_exporter/script1.sh
