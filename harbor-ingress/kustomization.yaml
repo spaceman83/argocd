@@ -3,3 +3,6 @@ kind: Kustomization
 resources:
   - ingress/middleware.yaml
   - ingress/ingressroute.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true

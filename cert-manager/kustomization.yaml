@@ -4,3 +4,6 @@ resources:
   - https://github.com/cert-manager/cert-manager/releases/download/v1.10.0/cert-manager.yaml
   - certificates/self-signed/issuer.yaml
   - certificates/self-signed/certificate.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
