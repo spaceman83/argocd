@@ -7,7 +7,6 @@ spec:
     - "k8s.lenin.nu"
     - "*.k8s.lenin.nu"
   secretName: selfsigned-cert-secret
-  namespace: traefik
   issuerRef:
     name: test-selfsigned
   privateKey:
