@@ -151,8 +151,8 @@ spec:
           containerPort: 9469
         volumeMounts:
         - name: script-exporter-conf
-          mountPath: /bin/config/config.yml
-          subPath: config.yml
+          mountPath: /bin/config/config.yaml
+          subPath: config.yaml
         - name: script-exporter-script1
           mountPath: /bin/config/script1.sh
           subPath: script1.sh
