@@ -45,3 +45,15 @@ spec:
   ports:
     - name: http
       port: 9427
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: script-exporter-svc
+spec:
+  selector:
+    app.kubernetes.io/name: script-exporter
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 9469
