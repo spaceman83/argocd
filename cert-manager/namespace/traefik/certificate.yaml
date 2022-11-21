@@ -3,6 +3,7 @@ kind: Certificate
 metadata: 
   name: selfsigned-cert
 spec:
+  commonName: k8s.lenin.nu 
   dnsNames:
     - argocd.k8s.lenin.nu
     - yopass.k8s.lenin.nu
