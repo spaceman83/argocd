@@ -6,3 +6,12 @@ metadata:
 spec:
   redirectScheme:
     scheme: https
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: yopass-ipwhitelist
+spec:
+  ipWhiteList:
+    sourceRange:
+      - 192.168.0.0/24
