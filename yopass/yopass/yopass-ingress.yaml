@@ -7,15 +7,15 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`yopass.k8s.lenin.nu`)
-      kind: Rule
-      middlewares:
-      - name: httpsredirect
-      - name: yopass-ipwhitelist
-      services:
-      - name: yopass-svc
-        port: 1337
-        namespace: tools
+  - match: Host(`yopass.k8s.lenin.nu`)
+    kind: Rule
+    middlewares:
+    - name: httpsredirect
+    - name: yopass-ipwhitelist
+    services:
+    - name: yopass-svc
+      port: 1337
+      namespace: tools
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
