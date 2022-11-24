@@ -14,4 +14,4 @@ metadata:
 spec:
   ipWhiteList:
     sourceRange:
-      - 192.168.0.0 - 192.168.0.255
+      - 192.168.0.0-192.168.0.255
