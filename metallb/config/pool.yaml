@@ -1,17 +1,27 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: pool01
+  name: pool01-argocd
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.100.20-192.168.100.23
+  - 192.168.100.20
   autoAssign: false
 ---
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: pool02
+  name: pool02-traefik
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.100.21
+  autoAssign: false
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool03
   namespace: metallb-system
 spec:
   addresses:
