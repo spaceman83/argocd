@@ -1,7 +1,7 @@
 apiVersion: metallb.io/v1beta1
-kind: L2Advertisement-pool01
+kind: L2Advertisement
 metadata:
-  name: advertisel2
+  name: advertisel2-pool01
   namespace: metallb-system
 spec:
   ipAddressPools:
@@ -13,9 +13,9 @@ spec:
     - kubernetes.io/hostname: k8s-worker-03
 ---
 apiVersion: metallb.io/v1beta1
-kind: L2Advertisement-pool02
+kind: L2Advertisement
 metadata:
-  name: advertisel2
+  name: advertisel2-pool02
   namespace: metallb-system
 spec:
   ipAddressPools:
@@ -27,9 +27,9 @@ spec:
     - kubernetes.io/hostname: k8s-worker-03
 ---
 apiVersion: metallb.io/v1beta1
-kind: L2Advertisement-pool03
+kind: L2Advertisement
 metadata:
-  name: advertisel2
+  name: advertisel2-pool03
   namespace: metallb-system
 spec:
   ipAddressPools:
