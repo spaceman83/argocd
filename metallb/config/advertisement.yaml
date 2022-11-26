@@ -6,7 +6,7 @@ metadata:
 spec:
   ipAddressPools:
   - pool01-argocd
-  nodeSelectors:
+  nodeSelector:
   - kubernetes.io/hostname: k8s-worker-01
   - kubernetes.io/hostname: k8s-worker-02
   - kubernetes.io/hostname: k8s-worker-03
@@ -19,7 +19,7 @@ metadata:
 spec:
   ipAddressPools:
   - pool02-traefik
-  nodeSelectors:
+  nodeSelector:
   - kubernetes.io/hostname: k8s-worker-01
   - kubernetes.io/hostname: k8s-worker-02
   - kubernetes.io/hostname: k8s-worker-03
@@ -32,7 +32,7 @@ metadata:
 spec:
   ipAddressPools:
   - pool03
-  nodeSelectors:
+  nodeSelector:
   - kubernetes.io/hostname: k8s-worker-01
   - kubernetes.io/hostname: k8s-worker-02
   - kubernetes.io/hostname: k8s-worker-03
