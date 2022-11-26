@@ -5,6 +5,6 @@ metadata:
   namespace: metallb-system
 spec:
   ipAddressPools:
-#  - pool01-argocd
+  - pool01-argocd
   - pool02-traefik
   - pool03
