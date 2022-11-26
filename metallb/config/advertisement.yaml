@@ -24,7 +24,7 @@ spec:
   - pool02-traefik
   nodeSelectors:
     - requiredDuringSchedulingIgnoredDuringExecution: 
-      nodeSelectorTerms:
+      - nodeSelectorTerms:
         matchExpressions:
         - key: app.kubernetes.io/name
           operator: in
