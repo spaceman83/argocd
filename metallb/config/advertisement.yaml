@@ -7,10 +7,9 @@ spec:
   ipAddressPools:
   - pool01-argocd
   nodeSelectors:
-  - matchLabels:
-    - kubernetes.io/hostname: k8s-worker-01
-    - kubernetes.io/hostname: k8s-worker-02
-    - kubernetes.io/hostname: k8s-worker-03
+  - kubernetes.io/hostname: k8s-worker-01
+  - kubernetes.io/hostname: k8s-worker-02
+  - kubernetes.io/hostname: k8s-worker-03
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -21,10 +20,9 @@ spec:
   ipAddressPools:
   - pool02-traefik
   nodeSelectors:
-  - matchLabels:
-    - kubernetes.io/hostname: k8s-worker-01
-    - kubernetes.io/hostname: k8s-worker-02
-    - kubernetes.io/hostname: k8s-worker-03
+  - kubernetes.io/hostname: k8s-worker-01
+  - kubernetes.io/hostname: k8s-worker-02
+  - kubernetes.io/hostname: k8s-worker-03
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -35,7 +33,6 @@ spec:
   ipAddressPools:
   - pool03
   nodeSelectors:
-  - matchLabels:
-    - kubernetes.io/hostname: k8s-worker-01
-    - kubernetes.io/hostname: k8s-worker-02
-    - kubernetes.io/hostname: k8s-worker-03
+  - kubernetes.io/hostname: k8s-worker-01
+  - kubernetes.io/hostname: k8s-worker-02
+  - kubernetes.io/hostname: k8s-worker-03
