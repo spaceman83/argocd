@@ -27,7 +27,7 @@ spec:
     - key: app.kubernetes.io/name
       operator: in
       values:
-      - traefik
+      - "traefik"
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
