@@ -24,3 +24,10 @@ metadata:
 spec:
   ipAddressPools:
   - pool03
+  nodeSelectors:
+  - matchLabels:
+      kubernetes.io/hostname: k8s-worker-01
+  - matchLabels:
+      kubernetes.io/hostname: k8s-worker-02
+  - matchLabels:
+      kubernetes.io/hostname: k8s-worker-03
