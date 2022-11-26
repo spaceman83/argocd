@@ -6,6 +6,5 @@ resources:
 
   - config/pool.yaml
   - config/advertisement.yaml
-  - config/metallb.yaml
 generatorOptions:
   disableNameSuffixHash: true
