@@ -23,13 +23,13 @@ spec:
   ipAddressPools:
   - pool02-traefik
   nodeSelectors:
-#  - matchExpressions:
-#    - key: app.kubernetes.io/name
-#      operator: in
-#      values:
-#      - traefik
-  - matchLabels:
-      app.kubernetes.io/name: traefik
+  - matchExpressions:
+    - label: app.kubernetes.io/name
+      operator: in
+      values:
+      - traefik
+#  - matchLabels:
+#      app.kubernetes.io/name: traefik
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
