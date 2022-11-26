@@ -25,7 +25,7 @@ spec:
   nodeSelectors:
   - matchExpressions:
     - key: app.kubernetes.io/name
-      operator: in
+      operator: In
       values:
       - "traefik"
 ---
