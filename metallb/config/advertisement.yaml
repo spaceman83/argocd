@@ -25,11 +25,11 @@ spec:
   nodeSelectors:
     requiredDuringSchedulingIgnoredDuringExecution: 
       nodeSelectorTerms:
-        - matchExpressions:
-          - key: app.kubernetes.io/name
-            operator: in
-            values:
-            - traefik
+        matchExpressions:
+        - key: app.kubernetes.io/name
+          operator: in
+          values:
+          - traefik
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
