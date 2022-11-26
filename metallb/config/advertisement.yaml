@@ -6,6 +6,9 @@ metadata:
 spec:
   ipAddressPools:
   - pool01-argocd
+  nodeSelectors:
+  - matchLabels:
+      app.kubernetes.io/name: argocd-server
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -17,11 +20,7 @@ spec:
   - pool02-traefik
   nodeSelectors:
   - matchLabels:
-      kubernetes.io/hostname: k8s-worker-01
-  - matchLabels:
-      kubernetes.io/hostname: k8s-worker-02
-  - matchLabels:
-      kubernetes.io/hostname: k8s-worker-03
+      app.kubernetes.io/name: traefik
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -33,8 +32,7 @@ spec:
   - pool03
   nodeSelectors:
   - matchLabels:
-      app.kubernetes.io/name: traefik
-#      kubernetes.io/hostname: k8s-worker-01
+      kubernetes.io/hostname: k8s-worker-01
   - matchLabels:
       kubernetes.io/hostname: k8s-worker-02
   - matchLabels:
