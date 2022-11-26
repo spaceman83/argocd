@@ -23,7 +23,7 @@ spec:
   ipAddressPools:
   - pool02-traefik
   nodeSelectors:
-    requiredDuringSchedulingIgnoredDuringExecution: 
+    - requiredDuringSchedulingIgnoredDuringExecution: 
       nodeSelectorTerms:
         matchExpressions:
         - key: app.kubernetes.io/name
