@@ -8,8 +8,3 @@ spec:
   peerASN: 65000
   peerAddress: 192.168.100.1
   peerPort: 180
-  nodeSelectors:
-  - matchExpressions:
-    - key: kubernetes.io/hostname
-      operator: In
-      values: [k8s-worker-01, k8s-worker-02, k8s-worker-03]
