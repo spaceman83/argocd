@@ -15,7 +15,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.100.21/32
+  - 192.168.101.20/32
   autoAssign: false
 ---
 apiVersion: metallb.io/v1beta1
@@ -34,4 +34,4 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.101.0/24
+  - 192.168.101.0/32

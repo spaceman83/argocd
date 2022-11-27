@@ -5,5 +5,6 @@ metadata:
   namespace: metallb-system
 spec:
   ipAddressPools:
+  - pool02-traefik
   - pool04
   aggregationLength: 32

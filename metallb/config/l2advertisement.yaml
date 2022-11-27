@@ -17,22 +17,6 @@ spec:
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
-  name: advertisel2-pool02
-  namespace: metallb-system
-spec:
-  ipAddressPools:
-  - pool02-traefik
-  nodeSelectors:
-  - matchLabels:
-      kubernetes.io/hostname: k8s-worker-01
-  - matchLabels:
-      kubernetes.io/hostname: k8s-worker-02
-  - matchLabels:
-      kubernetes.io/hostname: k8s-worker-03
----
-apiVersion: metallb.io/v1beta1
-kind: L2Advertisement
-metadata:
   name: advertisel2-pool03
   namespace: metallb-system
 spec:
