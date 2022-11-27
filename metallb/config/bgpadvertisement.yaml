@@ -7,4 +7,3 @@ spec:
   ipAddressPools:
   - pool04
   aggregationLength: 32
-  localpref: 100
