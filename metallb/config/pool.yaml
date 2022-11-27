@@ -26,3 +26,12 @@ metadata:
 spec:
   addresses:
   - 192.168.100.24-192.168.100.30
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool04
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.101.0-192.168.101.255
