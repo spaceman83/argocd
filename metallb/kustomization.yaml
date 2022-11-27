@@ -7,5 +7,6 @@ resources:
   - config/pool.yaml
   - config/l2advertisement.yaml
   - config/bgpadvertisement.yaml
+  - config/bgppeer.yaml
 generatorOptions:
   disableNameSuffixHash: true
