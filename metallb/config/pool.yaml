@@ -11,7 +11,7 @@ spec:
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: pool02-traefik
+  name: pool02-traefik-bgp
   namespace: metallb-system
 spec:
   addresses:
