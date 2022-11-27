@@ -7,4 +7,3 @@ spec:
   myASN: 64500
   peerASN: 65000
   peerAddress: 192.168.100.1
-  peerPort: 180
