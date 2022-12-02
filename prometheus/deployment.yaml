@@ -4,7 +4,6 @@ metadata:
   name: prometheus-shortterm
   namespace: tools
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: prometheus-shortterm
@@ -62,7 +61,6 @@ metadata:
   name: prometheus
   namespace: tools
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: prometheus
