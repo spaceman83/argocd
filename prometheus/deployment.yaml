@@ -20,6 +20,7 @@ spec:
             - "--storage.tsdb.retention.time=2h"
             - "--config.file=/etc/prometheus/prometheus.yml"
             - "--storage.tsdb.path=/prometheus/"
+            - "--web.enable-lifecycle"
           ports:
             - containerPort: 9090
           resources:
@@ -77,6 +78,7 @@ spec:
             - "--storage.tsdb.retention.time=180d"
             - "--config.file=/etc/prometheus/prometheus.yml"
             - "--storage.tsdb.path=/prometheus/"
+            - "--web.enable-lifecycle"
           ports:
             - containerPort: 9090
           resources:
