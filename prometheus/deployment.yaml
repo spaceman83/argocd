@@ -145,7 +145,7 @@ spec:
             - name: prometheus-conf-checker
               mountPath: /home/script/check.sh
               subPath: check.sh
-            - name: workdir
+            - name: prometheus-conf-checker-workdir
               mountPath: /home/script/
       volumes:
         - name: prometheus-config-volume
@@ -154,7 +154,7 @@ spec:
         - name: prometheus-conf-checker
           configMap:
             name: prometheus-conf-checker
-        - name: prometheus-confcheck-tmp
+        - name: prometheus-conf-checker-workdir
           emptyDir:
             sizeLimit: 20Mi
   revisionHistoryLimit: 1
