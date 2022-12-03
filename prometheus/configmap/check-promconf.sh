@@ -5,9 +5,6 @@
 ARGFILE=$(md5sum "$1")
 COMPAREFILE=$(cat "$1.md5")
 
-echo $ARGFILE
-echo $COMPAREFILE
-
 if [ "$ARGFILE" = "$COMPAREFILE" ]
 then
   sleep 1
