@@ -152,5 +152,5 @@ spec:
         - name: prometheus-conf-checker
           configMap:
             name: prometheus-conf-checker
-            defaultMode: 755
+            defaultMode: 0755
   revisionHistoryLimit: 1
