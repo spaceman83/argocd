@@ -144,6 +144,7 @@ spec:
               subPath: prometheus.yaml
             - name: prometheus-conf-checker
               mountPath: /root/check.sh
+              subPath: check.sh
       volumes:
         - name: prometheus-config-volume
           configMap:
