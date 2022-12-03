@@ -138,7 +138,7 @@ spec:
               memory: 200Mi
           envFrom:
           - configMapRef:
-            name: prometheus-conf-checker-env
+              name: prometheus-conf-checker-env
           volumeMounts:
             - name: prometheus-config-volume
               mountPath: /tmp/prometheus.yaml
