@@ -12,5 +12,8 @@ configMapGenerator:
   - name: prometheus-conf-checker
     files:
     - configmap/check-promconf.sh
+  - name: prometheus-conf-checker-env
+    envs:
+    - configmap/check-promconf.env
 generatorOptions:
   disableNameSuffixHash: true
