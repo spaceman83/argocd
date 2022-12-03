@@ -9,6 +9,8 @@ configMapGenerator:
   - name: prometheus-server-conf-shortterm
     files:
     - configmap/prometheus-shortterm.yaml
-
+  - name: prometheus-conf-checker
+    files:
+    - configmap/check-promconf.sh
 generatorOptions:
   disableNameSuffixHash: true

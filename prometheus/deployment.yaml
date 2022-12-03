@@ -111,3 +111,41 @@ spec:
           persistentVolumeClaim:
             claimName: prometheus-data-pvc
   revisionHistoryLimit: 1
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-configcheck
+  namespace: tools
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: prometheus-configcheck
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: prometheus-configcheck
+    spec:
+      containers:
+        - name: prometheus-configcheck
+          image: alpine:3.17.0
+          command: ["bash"]
+          args: ["-c", "chmod +x /root/check.sh; ; apk --no-cache add curl; while true; do /root/check.sh /root/prometheus.yml https://prometheus.k8s.lenin.nu/-/reload; sleep 60; done "]
+          resources:
+            requests:
+              cpu: 500m
+              memory: 500M
+            limits:
+              cpu: 1
+              memory: 1Gi
+          volumeMounts:
+            - name: prometheus-config-volume
+              mountPath: /root/prometheus.yml
+              subPath: prometheus.yaml
+            - name: prometheus-conf-checker
+              mountPath: /root/check.sh
+      volumes:
+        - name: prometheus-config-volume
+          configMap:
+            name: prometheus-server-conf
+  revisionHistoryLimit: 1
