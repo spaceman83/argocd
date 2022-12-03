@@ -130,7 +130,7 @@ spec:
         - name: prometheus-configcheck
           image: alpine:3.17.0
           command: ["/bin/sh"]
-          args: ["-c", "sleep 10; chmod +x /home/check.sh; apk --no-cache add curl bash; while true; do /home/check.sh /home/prometheus.yml https://prometheus.k8s.lenin.nu/-/reload; sleep 60; done "]
+          args: ["-c", chmod +x /home/script/check.sh; apk --no-cache add curl bash; while true; do /home/script/check.sh /home/script/prometheus.yml https://prometheus.k8s.lenin.nu/-/reload; sleep 60; done "]
           resources:
             requests:
               cpu: 500m
@@ -140,11 +140,13 @@ spec:
               memory: 1Gi
           volumeMounts:
             - name: prometheus-config-volume
-              mountPath: /home/prometheus.yml
+              mountPath: /home/script/prometheus.yml
               subPath: prometheus.yaml
             - name: prometheus-conf-checker
-              mountPath: /home/check.sh
+              mountPath: /home/script/check.sh
               subPath: check.sh
+            - name: workdir
+              mountPath: /home/script/
       volumes:
         - name: prometheus-config-volume
           configMap:
@@ -152,4 +154,7 @@ spec:
         - name: prometheus-conf-checker
           configMap:
             name: prometheus-conf-checker
+        - name: prometheus-confcheck-tmp
+          emptyDir:
+            sizeLimit: 20Mi
   revisionHistoryLimit: 1
