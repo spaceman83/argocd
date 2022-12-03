@@ -145,8 +145,6 @@ spec:
             - name: prometheus-conf-checker
               mountPath: /tmp/check.sh
               subPath: check.sh
-            - name: prometheus-conf-checker-workdir
-              mountPath: /tmp/
       volumes:
         - name: prometheus-config-volume
           configMap:
@@ -154,7 +152,5 @@ spec:
         - name: prometheus-conf-checker
           configMap:
             name: prometheus-conf-checker
-        - name: prometheus-conf-checker-workdir
-          emptyDir:
-            sizeLimit: 20Mi
+            defaultMode: 755
   revisionHistoryLimit: 1
