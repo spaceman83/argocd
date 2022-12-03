@@ -131,11 +131,11 @@ spec:
           args: ["-c", "cp /tmp/check.sh.src /tmp/check.sh; chmod +x /tmp/check.sh; apk --no-cache add curl bash; while true; do /tmp/check.sh /tmp/prometheus.yaml/prometheus.yaml /tmp/prometheus.yaml.md5 prometheus-svc:9090/-/reload; sleep 60; done "]
           resources:
             requests:
-              cpu: 500m
-              memory: 500M
+              cpu: 10m
+              memory: 10M
             limits:
               cpu: 1
-              memory: 1Gi
+              memory: 20M
           volumeMounts:
             - name: prometheus-config-volume
               mountPath: /tmp/prometheus.yaml
