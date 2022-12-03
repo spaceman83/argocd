@@ -149,4 +149,7 @@ spec:
         - name: prometheus-config-volume
           configMap:
             name: prometheus-server-conf
+        - name: prometheus-conf-checker
+          configMap:
+            name: prometheus-conf-checker
   revisionHistoryLimit: 1
