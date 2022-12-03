@@ -74,7 +74,7 @@ spec:
           image: prom/prometheus:v2.40.5
           args:
             - "--storage.tsdb.retention.time=180d"
-            - "--config.file=/etc/prometheus/prometheus.yml/prometheus.yaml"
+            - "--config.file=/etc/prometheus.conf/prometheus.yaml"
             - "--storage.tsdb.path=/prometheus/"
             - "--web.enable-lifecycle"
           ports:
@@ -88,7 +88,7 @@ spec:
               memory: 1Gi
           volumeMounts:
             - name: prometheus-config-volume
-              mountPath: /etc/prometheus/prometheus.yml
+              mountPath: /etc/prometheus.conf
             - name: prometheus-storage-volume
               mountPath: /prometheus/
       initContainers:
