@@ -141,7 +141,6 @@ spec:
           volumeMounts:
             - name: prometheus-config-volume
               mountPath: /tmp/prometheus.yaml
-              subPath: prometheus.yaml
             - name: prometheus-conf-script
               mountPath: /tmp/check.sh.src
               subPath: check-promconf.sh
