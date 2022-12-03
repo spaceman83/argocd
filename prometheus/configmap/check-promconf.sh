@@ -10,9 +10,9 @@ echo $COMPAREFILE
 
 if [ "$ARGFILE" = "$COMPAREFILE" ]
 then
-#  echo "They Match!"
+  sleep 1
 else
   echo "File diff found, triggering prometheus reload"
-  md5sum "$TESTFILE" > "$TESTFILE.md5"
+  md5sum "$1" > "$1.md5"
   curl --insecure -X POST "$2"
 fi
