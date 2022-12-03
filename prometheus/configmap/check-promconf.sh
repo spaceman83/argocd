@@ -12,5 +12,5 @@ then
 else
   echo "File diff found, triggering prometheus reload"
   md5sum "$1" > "$2"
-  curl --insecure -X POST "$3" -o /dev/null
+  curl --no-progress-meter --insecure -X POST "$3"
 fi
