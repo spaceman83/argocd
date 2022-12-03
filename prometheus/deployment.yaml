@@ -140,17 +140,14 @@ spec:
               memory: 1Gi
           volumeMounts:
             - name: prometheus-config-volume
-              mountPath: /tmp
-              subPath: prometheus.yaml
-            - name: prometheus-conf-checker
-              mountPath: /tmp
-              subPath: check.sh
+              mountPath: /tmp/prometheus.yaml
+            - name: prometheus-conf-script
+              mountPath: /tmp/check.sh
       volumes:
         - name: prometheus-config-volume
           configMap:
             name: prometheus-server-conf
-        - name: prometheus-conf-checker
+        - name: prometheus-conf-script
           configMap:
             name: prometheus-conf-checker
-            defaultMode: 0755
   revisionHistoryLimit: 1
