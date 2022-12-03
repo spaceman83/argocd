@@ -130,7 +130,7 @@ spec:
         - name: prometheus-configcheck
           image: alpine:3.17.0
           command: ["/bin/sh"]
-          args: ["-c", "chmod +x /root/check.sh; apk --no-cache add curl bash; while true; do /home/check.sh /home/prometheus.yml https://prometheus.k8s.lenin.nu/-/reload; sleep 60; done "]
+          args: ["-c", "chmod +x /home/check.sh; apk --no-cache add curl bash; while true; do /home/check.sh /home/prometheus.yml https://prometheus.k8s.lenin.nu/-/reload; sleep 60; done "]
           resources:
             requests:
               cpu: 500m
