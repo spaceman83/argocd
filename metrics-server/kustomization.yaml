@@ -1,0 +1,2 @@
+resources:
+-  https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.6.2/components.yaml
