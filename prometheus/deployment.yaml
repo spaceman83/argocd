@@ -4,18 +4,19 @@ metadata:
   name: prometheus-shortterm
   namespace: tools
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: prometheus-shortterm
-  template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: prometheus-shortterm
   strategy:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
     type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: prometheus-shortterm
     spec:
       containers:
         - name: prometheus-shortterm
@@ -66,6 +67,7 @@ metadata:
   name: prometheus
   namespace: tools
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: prometheus
