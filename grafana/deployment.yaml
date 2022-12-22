@@ -8,6 +8,11 @@ spec:
   selector:
     matchLabels:
       app: grafana
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
       name: grafana
@@ -16,7 +21,7 @@ spec:
     spec:
       containers:
       - name: grafana
-        image: grafana/grafana:9.3.1
+        image: grafana/grafana:9.3.2
         ports:
         - name: grafana
           containerPort: 3000

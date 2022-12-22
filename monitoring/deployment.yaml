@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: snmp-exporter
-        image: prom/snmp-exporter:v0.20.0
+        image: prom/snmp-exporter:v0.21.0
         ports:
         - name: http
           containerPort: 9116
@@ -77,7 +77,7 @@ spec:
     spec:
       containers:
       - name: node-exporter
-        image: prom/node-exporter:v1.4.0
+        image: prom/node-exporter:v1.5.0
         ports:
         - name: http
           containerPort: 9100
@@ -107,7 +107,7 @@ spec:
     spec:
       containers:
       - name: ping-exporter
-        image: czerwonk/ping_exporter:latest
+        image: czerwonk/ping_exporter:v1.0.1
         ports:
         - name: http
           containerPort: 9427
@@ -145,7 +145,7 @@ spec:
     spec:
       containers:
       - name: script-exporter
-        image: ricoberger/script_exporter:master
+        image: ricoberger/script_exporter:v2.8.0
         args:
           - "-config.file=/bin/config/config.yaml"
           - "-web.listen-address=:9469"
