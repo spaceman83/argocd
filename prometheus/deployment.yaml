@@ -11,6 +11,11 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: prometheus-shortterm
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
     spec:
       containers:
         - name: prometheus-shortterm
@@ -64,6 +69,11 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: prometheus
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
       labels:
