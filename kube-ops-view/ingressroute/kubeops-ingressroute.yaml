@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: yopass-http
+  name: kubeopsview-http
   namespace: tools
 spec:
   entryPoints:
@@ -19,7 +19,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: yopass-https
+  name: kubeopsview-https
   namespace: tools
 spec:
   entryPoints:
