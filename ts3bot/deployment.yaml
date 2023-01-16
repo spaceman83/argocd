@@ -3,12 +3,17 @@ kind: Deployment
 metadata:
   name: ts3bot
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: ts3bot
   template:
     metadata:
+      annotations:
+        another-autoscaler/start-time: "00 21 * * 4"
+        another-autoscaler/start-replicas: "1"
+        another-autoscaler/stop-time: "0 2 * * 5"
+        another-autoscaler/stop-replicas: "0"
       labels:
         app.kubernetes.io/name: ts3bot
     spec:
