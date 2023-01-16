@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ts3bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ts3bot
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ts3bot
+    spec:
+      containers:
+      - name: ts3bot
+        image:  ancieque/ts3audiobot:0.12.0
+        volumeMounts:
+        - name: ts3-bot-config
+          mountPath: /app/data/rights.toml
+          subPath: rights.toml
+        - name: ts3-bot-config
+          mountPath: /app/data/ts3audiobot.toml
+          subPath: ts3audiobot.toml
+        - name: ts3-bot-config
+          mountPath: /app/data/bots/HuttonChatDisabled/bot.toml
+          subPath: chatDisabled.toml
+        - name: ts3-bot-config
+          mountPath: /app/data/bots/HuttonChatEnabled/bot.toml
+          subPath: chatEnabled.toml
+        resources: 
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 500m
+            memory: 500Mi
+      restartPolicy: Always
+      volumes:
+      - name: ts3-bot-config
+        configMap:
+          name: ts3-bot-config
+  revisionHistoryLimit: 1
