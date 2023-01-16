@@ -11,7 +11,7 @@ spec:
     metadata:
       annotations:
 #        another-autoscaler/start-time: "00 21 * * 4"
-        another-autoscaler/start-time: "43 21 * * * "
+        another-autoscaler/start-time: "43 21 * * *"
         another-autoscaler/start-replicas: "1"
 #        another-autoscaler/stop-time: "0 2 * * 5"
         another-autoscaler/stop-time: "45 21 * * *"
