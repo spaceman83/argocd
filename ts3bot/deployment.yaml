@@ -4,13 +4,12 @@ metadata:
   name: ts3bot
   annotations:
 #    another-autoscaler/start-time: "00 21 * * 4"
-    another-autoscaler/start-time: "53 20 * * *"
+    another-autoscaler/start-time: "00 21 * * *"
     another-autoscaler/start-replicas: "1"
 #    another-autoscaler/stop-time: "0 2 * * 5"
-    another-autoscaler/stop-time: "57 20 * * *"
+    another-autoscaler/stop-time: "05 21 * * *"
     another-autoscaler/stop-replicas: "0"
 spec:
-  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: ts3bot
