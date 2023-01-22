@@ -17,3 +17,7 @@ ports:
       certResolver: ""
       domains: 
        - main: "*.k8s.lenin.nu"
+tlsStore:
+  default:
+    defaultCertificate:
+      secretName: k8s-lenin-nu-cert
