@@ -4,6 +4,8 @@ service:
   spec:
     externalTrafficPolicy: Local
 ports:
+  defaultCertificate:
+    secretName: k8s-lenin-nu-cert
   websecure:
     port: 8443
     expose: true
