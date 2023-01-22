@@ -3,9 +3,9 @@ service:
     metallb.universe.tf/address-pool: pool02-traefik-bgp
   spec:
     externalTrafficPolicy: Local
-ports:
   defaultCertificate:
     secretName: k8s-lenin-nu-cert
+ports:
   websecure:
     port: 8443
     expose: true
