@@ -41,7 +41,7 @@ metadata:
   name: another-autoscaler
   namespace: another
 data:
-  LOG_LEVEL: "INFO"
+  LOG_LEVEL: "WARN"
   LOG_FORMAT: "JSON"
   CHECK_EVERY: "5"
 ---
