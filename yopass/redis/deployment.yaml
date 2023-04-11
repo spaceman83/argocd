@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: yopass-redis
-        image: redis:7.0.7-alpine
+        image: redis:alpine3.17
         args:
         - "--save 60 1"
         - "--loglevel warning"
