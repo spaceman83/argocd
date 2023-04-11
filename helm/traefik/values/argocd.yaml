@@ -1,0 +1,16 @@
+project: default
+source:
+  repoURL: 'https://traefik.github.io/charts'
+  targetRevision: 22.1.0
+  helm:
+    valueFiles:
+      - >-
+        https://raw.githubusercontent.com/spaceman83/argocd/master/helm/traefik/values.yaml
+  chart: traefik
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: traefik
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
+revisionHistoryLimit: 1
