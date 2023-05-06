@@ -49,7 +49,4 @@ spec:
           - name: POSTGRES_USER
             value: "zabbix"
           - name: POSTGRES_PASSWORD
-            value: "zabbix"
-          - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
-            value: "true"
   revisionHistoryLimit: 1

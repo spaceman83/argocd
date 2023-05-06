@@ -46,6 +46,8 @@ spec:
 #               secretKeyRef:
 #                name: mysql-secret
 #                key: mysql-root-pass
+        - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
+          value: "true"
         - name: DB_SERVER_HOST
           value: "192.168.103.10"
         - name: DB_SERVER_PORT
