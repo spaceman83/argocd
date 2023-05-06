@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: postfixadmin
-          image: postfixadmin:3.3.13-fpm
+          image: postfixadmin:3.3.13-apache
           ports:
           - name: http
             containerPort: 8080
