@@ -1,0 +1,116 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: zabbix-server
+  name: zabbix-server
+  namespace: zabbix
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zabbix-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: zabbix-server
+      containers:
+        - image: zabbix/zabbix-server-pgsql:6.0.17-alpine
+          imagePullPolicy: IfNotPresent
+          name: zabbix-server
+          ports:
+            - containerPort: 10051
+              protocol: TCP
+              name: zabbix-trapper
+          resources:    
+            requests:
+              cpu: 50m
+              memory: 100Mi
+            limits:
+              cpu: 2
+              memory: 500Mi                  
+          startupProbe:
+            tcpSocket:
+              port: 10051
+            failureThreshold: 60
+            periodSeconds: 10
+          readinessProbe:
+            failureThreshold: 5
+            tcpSocket:
+              port: 10051
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            successThreshold: 1
+            timeoutSeconds: 2
+          livenessProbe:
+            tcpSocket:
+              port: 10051
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          env:
+            - name: PHP_TZ
+              value: "Europe/Stockholm"
+#            - name: MYSQL_USER
+#              valueFrom:
+#               secretKeyRef:
+#                name: mysql-secret
+#                key: mysql-zbx-user
+#            - name: MYSQL_PASSWORD
+#              valueFrom:
+#               secretKeyRef:
+#                name: mysql-secret
+#                key: mysql-zbx-pass
+#            - name: MYSQL_ROOT_PASSWORD
+#              valueFrom:
+#               secretKeyRef:
+#                name: mysql-secret
+#                key: mysql-root-pass
+            - name: DB_SERVER_HOST
+              value: "192.168.103.10"
+#            - name: POSTGRES_USER
+#              value: zabbix
+#            - name: POSTGRES_PASSWORD
+#              value: zabbix
+#            - name: DB_SERVER_PORT
+#              value: "3306"
+#            - name: MYSQL_DATABASE
+#              value: "zabbix"
+            - name: ZBX_CACHESIZE
+              value: "1024M"
+            - name: ZBX_TRENDCACHESIZE
+              value: "1024M"
+            - name: ZBX_HISTORYCACHESIZE
+              value: "2048M"
+            - name: ZBX_HISTORYINDEXCACHESIZE
+              value: "1024M"
+            - name: ZBX_STARTTRAPPERS
+              value: "5"
+            - name: ZBX_STARTPREPROCESSORS
+              value: "10"
+            - name: ZBX_STARTDBSYNCERS
+              value: "10"
+            - name: ZBX_JAVAGATEWAY_ENABLE
+              value: "true"
+            - name: ZBX_STARTJAVAPOLLERS
+              value: "5"
+            - name: ZBX_ENABLE_SNMP_TRAPS
+              value: "true"
+            - name: ZBX_STARTPROXYPOLLERS
+              value: "5"
+            - name: ZBX_PROXYCONFIGFREQUENCY
+              value: "60"
+
+#          volumeMounts:
+#            - mountPath: /var/tmp/
+#              name: zabbix-server-var-tmp
+#            - mountPath: /usr/lib/zabbix/alertscripts
+#              name: zabbix-server-alertscripts
+#            - mountPath: /usr/lib/zabbix/externalscripts
+#              name: zabbix-server-externalscripts
+#            - mountPath: /var/lib/zabbix/mibs
+#              name: zabbix-server-mibs
