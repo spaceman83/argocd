@@ -6,7 +6,10 @@ resources:
 
   - deployment.yaml
   - service/service.yaml
-  - zabbix/deployment.yaml
+  - zabbix-server/deployment.yaml
+  - zabbix-server/service/service.yaml
+  - zabbix-web/deployment.yaml
+  - zabbix-web/service/service.yaml
 
 configMapGenerator:
   - name: script-exporter-config

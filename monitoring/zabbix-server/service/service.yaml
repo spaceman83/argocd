@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: zabbix-server-svc
+spec:
+  selector:
+    app.kubernetes.io/name: zabbix-server
+  type: ClusterIP
+  ports:
+    - name: zabbix-trapper
+      port: 10051
