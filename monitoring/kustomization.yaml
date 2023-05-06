@@ -10,6 +10,7 @@ resources:
   - zabbix-server/service/service.yaml
   - zabbix-web/deployment.yaml
   - zabbix-web/service/service.yaml
+  - zabbix-web/service/ingressroute.yaml
 
 configMapGenerator:
   - name: script-exporter-config
