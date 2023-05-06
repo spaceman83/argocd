@@ -48,12 +48,12 @@ spec:
 #                key: mysql-root-pass
         - name: DB_SERVER_HOST
           value: "192.168.103.10"
+            - name: DB_SERVER_PORT
+              value: "5000"
 #            - name: POSTGRES_USER
 #              value: zabbix
 #            - name: POSTGRES_PASSWORD
 #              value: zabbix
-#            - name: DB_SERVER_PORT
-#              value: "3306"
 #            - name: MYSQL_DATABASE
 #              value: "zabbix"
         - name: ZBX_CACHESIZE
