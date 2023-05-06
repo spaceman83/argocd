@@ -40,8 +40,8 @@ spec:
           env:
           - name: ZBX_SERVER_HOST
             value: "zabbix-server-svc"
-#          - name: ZBX_SERVER_PORT
-#            value: 10051
+          - name: ZBX_SERVER_PORT
+            value: "10051"
           - name: DB_SERVER_HOST
             value: "192.168.103.10"
           - name: DB_SERVER_PORT
