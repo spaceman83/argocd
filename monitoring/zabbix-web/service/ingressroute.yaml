@@ -12,7 +12,7 @@ spec:
       - name: httpsredirect
       services:
       - name: zabbix-web-svc
-        port: 8080
+        port: 80
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -28,4 +28,4 @@ spec:
     kind: Rule
     services:
     - name: zabbix-web-svc
-      port: 8080
+      port: 80
