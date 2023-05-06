@@ -16,7 +16,7 @@ spec:
       - name: zabbix-server
         image: zabbix/zabbix-server-pgsql:6.0.17-alpine
         ports:
-        - zabbix-trapper: http
+        - name: zabbix-trapper
           containerPort: 10051
         envFrom:
         - configMapRef:
