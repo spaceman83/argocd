@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zabbix-server
-        image: zabbix/zabbix-server-pgsql:6.1.7-alpine
+        image: zabbix/zabbix-server-pgsql:6.0.17-alpine
         ports:
         - name: zabbix-trapper
           containerPort: 10051
