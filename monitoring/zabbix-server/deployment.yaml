@@ -18,6 +18,8 @@ spec:
         ports:
         - name: zabbix-trapper
           containerPort: 10051
+        - name: zabbix-agent
+          containerPort: 10050
         envFrom:
         - configMapRef:
             name: vcenter-exporter-env
