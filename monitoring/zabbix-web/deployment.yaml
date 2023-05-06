@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: zabbix-web
   labels:
-    app.kubernetes.io/app: zabbix-web
+    app.kubernetes.io/name: zabbix-web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/app: zabbix-web
+      app.kubernetes.io/name: zabbix-web
   template:
     metadata:
       labels:
-        app.kubernetes.io/app: zabbix-web
+        app.kubernetes.io/name: zabbix-web
     spec:
       affinity:
         podAntiAffinity:
