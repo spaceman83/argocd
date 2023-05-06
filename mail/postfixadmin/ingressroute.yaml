@@ -1,0 +1,31 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: postfixadmin-http
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`postfixadmin.k8s.lenin.nu`)
+      kind: Rule
+      middlewares:
+      - name: httpsredirect
+      services:
+      - name: postfixadmin-svc
+        port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: postfixadmin-https
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: 
+  routes:
+  - match: Host(`postfixadmin.k8s.lenin.nu`)
+    kind: Rule
+    services:
+    - name: postfixadmin-svc
+      port: 80
