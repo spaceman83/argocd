@@ -1,0 +1,31 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: zabbix-web-http
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`zabbix.k8s.lenin.nu`)
+      kind: Rule
+      middlewares:
+      - name: httpsredirect
+      services:
+      - name: zabbix-web
+        port: 8080
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: zabix-web-https
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: 
+  routes:
+  - match: Host(`zabbix.k8s.lenin.nu`)
+    kind: Rule
+    services:
+    - name: zabbix-web
+      port: 8080
