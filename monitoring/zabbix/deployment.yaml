@@ -19,6 +19,7 @@ spec:
     metadata:
       labels:
         app: zabbix-server
+      spec:
       containers:
         - image: zabbix/zabbix-server-pgsql:6.0.17-alpine
           imagePullPolicy: IfNotPresent
