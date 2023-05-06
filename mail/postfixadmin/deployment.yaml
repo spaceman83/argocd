@@ -33,11 +33,11 @@ spec:
           - name: POSTFIXADMIN_DB_HOST
             value: "192.168.103.10"
           - name: POSTFIXADMIN_DB_USER
-            value: "postfix"
+            value: "postfixadmin"
           - name: POSTFIXADMIN_DB_PORT
             value: "5000"
           - name: POSTFIXADMIN_DB_PASSWORD
-            value: "postfix"
+            value: "postfixadmin"
           - name: POSTFIXADMIN_DB_NAME
-            value: "postfix"
+            value: "postfixadmin"
   revisionHistoryLimit: 1
