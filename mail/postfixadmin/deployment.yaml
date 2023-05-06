@@ -40,4 +40,6 @@ spec:
             value: "postfixadmin"
           - name: POSTFIXADMIN_DB_NAME
             value: "postfixadmin"
+          - name: POSTFIXADMIN_SETUP_PASSWORD
+            value: "aeb!qjy4reh2HRC8kjn"
   revisionHistoryLimit: 1
