@@ -11,7 +11,7 @@ spec:
       middlewares:
       - name: httpsredirect
       services:
-      - name: zabbix-web
+      - name: zabbix-web-svc
         port: 8080
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -27,5 +27,5 @@ spec:
   - match: Host(`zabbix.k8s.lenin.nu`)
     kind: Rule
     services:
-    - name: zabbix-web
+    - name: zabbix-web-svc
       port: 8080
