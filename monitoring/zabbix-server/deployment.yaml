@@ -82,5 +82,9 @@ spec:
           value: "5"
         - name: ZBX_PROXYCONFIGFREQUENCY
           value: "60"              
+        - name: ZBX_STARTHTTPPOLLERS
+          value: "5"
+        - name: ZBX_STARTESCALATORS
+          value: "2"
       restartPolicy: Always
   revisionHistoryLimit: 1
