@@ -85,6 +85,6 @@ spec:
         - name: ZBX_STARTHTTPPOLLERS
           value: "5"
         - name: ZBX_STARTESCALATORS
-          value: "2"
+          value: "5"
       restartPolicy: Always
   revisionHistoryLimit: 1
