@@ -18,8 +18,6 @@ spec:
         ports:
         - name: zabbix-trapper
           containerPort: 10051
-        - name: zabbix-agent
-          containerPort: 10050
         envFrom:
         - configMapRef:
             name: vcenter-exporter-env
@@ -28,26 +26,11 @@ spec:
             cpu: 300m
             memory: 400Mi
           limits:
-            cpu: 2
-            memory: 500Mi    
+            cpu: 4
+            memory: 1000Mi    
         env:
         - name: PHP_TZ
           value: "Europe/Stockholm"
-#            - name: MYSQL_USER
-#              valueFrom:
-#               secretKeyRef:
-#                name: mysql-secret
-#                key: mysql-zbx-user
-#            - name: MYSQL_PASSWORD
-#              valueFrom:
-#               secretKeyRef:
-#                name: mysql-secret
-#                key: mysql-zbx-pass
-#            - name: MYSQL_ROOT_PASSWORD
-#              valueFrom:
-#               secretKeyRef:
-#                name: mysql-secret
-#                key: mysql-root-pass
         - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
           value: "true"
         - name: DB_SERVER_HOST
