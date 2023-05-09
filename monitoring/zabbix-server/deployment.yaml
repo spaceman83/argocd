@@ -18,16 +18,13 @@ spec:
         ports:
         - name: zabbix-trapper
           containerPort: 10051
-        envFrom:
-        - configMapRef:
-            name: vcenter-exporter-env
-        resources:    
-          requests:
-            cpu: 300m
-            memory: 400Mi
-          limits:
-            cpu: 4
-            memory: 1000Mi    
+#        resources:    
+#          requests:
+#            cpu: 300m
+#            memory: 400Mi
+#          limits:
+#            cpu: 4
+#            memory: 1000Mi    
         env:
         - name: PHP_TZ
           value: "Europe/Stockholm"
