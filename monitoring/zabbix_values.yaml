@@ -209,7 +209,7 @@ zabbixAgent:
   env:
       ## Zabbix server host
     - name: ZBX_SERVER_HOST
-      value: 0.0.0.0/0
+      value: "zabbix-server-svc"
       ## Zabbix server port
     - name: ZBX_SERVER_PORT
       value: 10051
