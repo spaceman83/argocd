@@ -35,9 +35,9 @@ spec:
         - name: DB_SERVER_PORT
           value: "5000"
         - name: POSTGRES_USER
-          value: zabbix
+          value: "zabbix"
         - name: POSTGRES_PASSWORD
-          value: zabbix
+          value: "zabbix"
         - name: ZBX_CACHESIZE
           value: "1024M"
         - name: ZBX_TRENDCACHESIZE
