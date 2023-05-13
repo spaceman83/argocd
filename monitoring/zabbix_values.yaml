@@ -43,7 +43,7 @@ zabbixProxy:
       value: 0
     ## Zabbix proxy hostname
     - name: ZBX_HOSTNAME
-      value: zabbix-proxy
+      value: "zabbix-proxy Kubernetes"
     ## Zabbix server host
     ## If ProxyMode is set to active mode:
     ## IP address or DNS name of Zabbix server to get configuration data from and send data to.
