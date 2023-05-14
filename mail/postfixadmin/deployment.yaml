@@ -30,5 +30,6 @@ spec:
           envFrom:
           - secretRef:
               name: postfixadmindb
+          - secretRef:
               name: setuppw
   revisionHistoryLimit: 1
