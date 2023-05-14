@@ -15,10 +15,10 @@ spec:
       containers:
       - name: pgbouncer-exporter
         image: prometheuscommunity/pgbouncer-exporter:v0.6.0
-        command: [ "/bin/sh", "-c", "--" ]
+#        command: [ "/bin/sh", "-c", "--" ]
         args: 
-#        - "--pgBouncer.connectionString=$(PG_USER)&$(PG_HOST)/pgbouncer?sslmode=disable"
-        - "while true; do sleep 30; done" 
+        - "--pgBouncer.connectionString=$(PG_USER)@192.168.103.10:6432/pgbouncer?sslmode=disable"
+#        - "while true; do sleep 30; done" 
         ports:
         - name: http
           containerPort: 9127
