@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vcenter-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: vcenter-exporter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: vcenter-exporter
+    spec:
+      containers:
+      - name: vcenter-exporter
+        image: pryorda/vmware_exporter:v0.18.4
+        ports:
+        - name: http
+          containerPort: 9272
+        envFrom:
+        - configMapRef:
+            name: vcenter-exporter-env
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+      restartPolicy: Always
+  revisionHistoryLimit: 1

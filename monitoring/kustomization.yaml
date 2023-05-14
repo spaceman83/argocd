@@ -2,22 +2,31 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: tools
 resources:
-#  - ingress/middleware.yaml
-
-  - deployment.yaml
-  - service/service.yaml
   - exporters/pgbouncer-exporter/deployment.yaml
   - exporters/pgbouncer-exporter/service.yaml
   - exporters/postgres-exporter/deployment.yaml
   - exporters/postgres-exporter/service.yaml
+  - exporters/vcenter-exporter/deployment.yaml
+  - exporters/vcenter-exporter/service.yaml
+  - exporters/snmp-exporter/deployment.yaml
+  - exporters/snmp-exporter/service.yaml
+  - exporters/node-exporter/deployment.yaml
+  - exporters/node-exporter/service.yaml
+  - exporters/ping-exporter/deployment.yaml
+  - exporters/ping-exporter/service.yaml
+  - exporters/script-exporter/deployment.yaml
+  - exporters/script-exporter/service.yaml
+  - exporters/pihole-exporter/deployment.yaml
+  - exporters/pihole-exporter/service.yaml
+
 
 configMapGenerator:
   - name: script-exporter-config
     files:
-    - script_exporter/config.yaml
+    - script-exporter/config.yaml
   - name: script-exporter-script1
     files:
-    - script_exporter/script1.sh
+    - script-exporter/script1.sh
 
 
 generatorOptions:

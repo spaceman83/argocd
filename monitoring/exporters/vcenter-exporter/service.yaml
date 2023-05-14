@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: vcenter-exporter-svc
+spec:
+  selector:
+    app.kubernetes.io/name: vcenter-exporter
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 9272

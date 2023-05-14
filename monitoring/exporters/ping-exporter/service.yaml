@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: ping-exporter-svc
+spec:
+  selector:
+    app.kubernetes.io/name: ping-exporter
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 9427

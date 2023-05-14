@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: script-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: script-exporter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: script-exporter
+    spec:
+      containers:
+      - name: script-exporter
+        image: ricoberger/script_exporter:v2.12.0
+        args:
+          - "-config.file=/bin/config/config.yaml"
+          - "-web.listen-address=:9469"
+        ports:
+        - name: http
+          containerPort: 9469
+        volumeMounts:
+        - name: script-exporter-conf
+          mountPath: /bin/config/config.yaml
+          subPath: config.yaml
+        - name: script-exporter-script1
+          mountPath: /bin/config/script1.sh
+          subPath: script1.sh
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+      restartPolicy: Always
+      volumes:
+      - name: script-exporter-conf
+        configMap:
+          name: script-exporter-config
+      - name: script-exporter-script1
+        configMap:
+          name: script-exporter-script1
+  revisionHistoryLimit: 1
