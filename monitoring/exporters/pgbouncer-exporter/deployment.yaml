@@ -18,7 +18,7 @@ spec:
 #        command: [ "/bin/sh", "-c", "--" ]
         args: 
 #        - "--pgBouncer.connectionString=postgres://$(PG_USER)@192.168.103.10:6543/pgbouncer?sslmode=disable"
-        - "--pgBouncer.connectionString=postgres://$(PG_ARG)/pgbouncer?sslmode=disable"
+        - "--pgBouncer.connectionString=postgres://$(PG_ARG)"
 #        - "while true; do sleep 30; done" 
         ports:
         - name: http
