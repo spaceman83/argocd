@@ -52,7 +52,7 @@ zabbixProxy:
     ## List of comma delimited IP addresses, optionally in CIDR notation, or DNS names of Zabbix server. Incoming connections will be accepted only from the addresses listed here. If IPv6 support is enabled then '127.0.0.1', '::127.0.0.1', '::ffff:127.0.0.1' are treated equally and '::/0' will allow any IPv4 or IPv6 address. '0.0.0.0/0' can be used to allow any IPv4 address.
     ## Example: Server=127.0.0.1,192.168.1.0/24,::1,2001:db8::/32,zabbix.example.com
     - name: ZBX_SERVER_HOST
-      value: "zabbix-server-svc"
+      value: "zabbix-server-svc.zabbix-server.svc.cluster.local"
     ## Zabbix server port
     - name: ZBX_SERVER_PORT
       value: 10051
