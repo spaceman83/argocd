@@ -27,7 +27,7 @@ spec:
             memory: 1000Mi    
         envFrom:
         - secretRef:
-          name: zabbixdb
+            name: zabbixdb
         env:
         - name: PHP_TZ
           value: "Europe/Stockholm"

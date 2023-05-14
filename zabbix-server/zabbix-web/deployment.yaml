@@ -38,7 +38,7 @@ spec:
           - containerPort: 8080
           envFrom:
           - secretRef:
-            name: zabbixdb
+              name: zabbixdb
           env:
           - name: ZBX_SERVER_HOST
             value: "zabbix-server-svc"
