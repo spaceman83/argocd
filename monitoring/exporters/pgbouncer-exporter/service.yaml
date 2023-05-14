@@ -8,7 +8,8 @@ spec:
   type: ClusterIP
   ports:
     - name: http
-      port: 9272
+      port: 80
+      targetport: 9127
 ---
 kind: Service
 apiVersion: v1
@@ -20,7 +21,8 @@ spec:
   type: ClusterIP
   ports:
     - name: http
-      port: 9272
+      port: 80
+      targetport: 9127
 ---
 kind: Service
 apiVersion: v1
@@ -32,4 +34,5 @@ spec:
   type: ClusterIP
   ports:
     - name: http
-      port: 9272      
+      port: 80
+      targetport: 9127      
