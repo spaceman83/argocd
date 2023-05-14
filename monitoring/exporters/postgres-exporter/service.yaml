@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: postgres-exporter-01-svc
+spec:
+  selector:
+    app.kubernetes.io/name: postgres-exporter-01
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 6432
