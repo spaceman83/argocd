@@ -9,7 +9,7 @@ spec:
   ports:
     - name: http
       port: 80
-      targetport: 9127
+      targetPort: 9127
 ---
 kind: Service
 apiVersion: v1
@@ -22,7 +22,7 @@ spec:
   ports:
     - name: http
       port: 80
-      targetport: 9127
+      targetPort: 9127
 ---
 kind: Service
 apiVersion: v1
@@ -35,4 +35,4 @@ spec:
   ports:
     - name: http
       port: 80
-      targetport: 9127      
+      targetPort: 9127      
