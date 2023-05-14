@@ -43,7 +43,7 @@ metadata:
 data:
   LOG_LEVEL: "WARN"
   LOG_FORMAT: "JSON"
-  CHECK_EVERY: "5"
+  CHECK_EVERY: "30"
 ---
 apiVersion: apps/v1
 kind: Deployment
