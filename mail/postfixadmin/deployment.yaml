@@ -27,19 +27,7 @@ spec:
             requests:
               cpu: "1"
               memory: 512M
-          env:
-          - name: POSTFIXADMIN_DB_TYPE
-            value: "pgsql"
-          - name: POSTFIXADMIN_DB_HOST
-            value: "192.168.103.10"
-          - name: POSTFIXADMIN_DB_USER
-            value: "postfixadmin"
-          - name: POSTFIXADMIN_DB_PORT
-            value: "5000"
-          - name: POSTFIXADMIN_DB_PASSWORD
-            value: "postfixadmin"
-          - name: POSTFIXADMIN_DB_NAME
-            value: "postfixadmin"
-#          - name: POSTFIXADMIN_SETUP_PASSWORD
-#            value: "$2y$10$RVIu7OmGtWHxa0W3g0I5eOGVbAHc3e7HB40WTaZKSCAb3Ryf78ow6"
+          envFrom:
+          - secretRef:
+              name: postfixadmindb
   revisionHistoryLimit: 1
