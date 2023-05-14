@@ -8,8 +8,8 @@ resources:
   - service/service.yaml
   - exporters/pgbouncer-exporter/deployment.yaml
   - exporters/pgbouncer-exporter/service.yaml
-  - exporter/postgres-exporter/deployment.yaml
-  - exporter/postgres-exporter/service.yaml
+  - exporters/postgres-exporter/deployment.yaml
+  - exporters/postgres-exporter/service.yaml
 
 configMapGenerator:
   - name: script-exporter-config
