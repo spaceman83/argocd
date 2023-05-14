@@ -9,4 +9,30 @@ spec:
   ports:
     - name: http
       port: 80
-      targetPort: 6432
+      targetPort: 9187
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: postgres-exporter-02-svc
+spec:
+  selector:
+    app.kubernetes.io/name: postgres-exporter-02
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 9187
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: postgres-exporter-03-svc
+spec:
+  selector:
+    app.kubernetes.io/name: postgres-exporter-03
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 9187

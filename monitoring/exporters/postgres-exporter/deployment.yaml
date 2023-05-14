@@ -17,10 +17,76 @@ spec:
         image: prometheuscommunity/postgres-exporter:v0.12.0
         ports:
         - name: http
-          containerPort: 6432
+          containerPort: 9187
         envFrom:
         - secretRef:
             name: pgsql-secret-01 
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+      restartPolicy: Always
+  revisionHistoryLimit: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-exporter-02
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgres-exporter-02
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: postgres-exporter-02
+    spec:
+      containers:
+      - name: postgres-exporter-02
+        image: prometheuscommunity/postgres-exporter:v0.12.0
+        ports:
+        - name: http
+          containerPort: 9187
+        envFrom:
+        - secretRef:
+            name: pgsql-secret-02
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+      restartPolicy: Always
+  revisionHistoryLimit: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-exporter-03
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgres-exporter-03
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: postgres-exporter-03
+    spec:
+      containers:
+      - name: postgres-exporter-03
+        image: prometheuscommunity/postgres-exporter:v0.12.0
+        ports:
+        - name: http
+          containerPort: 9187
+        envFrom:
+        - secretRef:
+            name: pgsql-secret-03
         resources: 
           limits:
             cpu: 100m
