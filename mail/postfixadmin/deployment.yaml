@@ -29,6 +29,6 @@ spec:
               memory: 512M
           envFrom:
           - secretRef:
-              - name: postfixadmindb
-              - name: setuppw
+              name: postfixadmindb
+              name: setuppw
   revisionHistoryLimit: 1
