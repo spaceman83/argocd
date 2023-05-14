@@ -16,7 +16,7 @@ spec:
       - name: pgbouncer-exporter
         image: prometheuscommunity/pgbouncer-exporter:v0.6.0
         args: 
-        - "--pgBouncer.connectionString=postgres://$(PG_USER)@192.168.103.10:5000/pgbouncer?sslmode=disable"
+        - "--pgBouncer.connectionString=postgres://$(PG_USER)@192.168.103.10:6432/pgbouncer?sslmode=disable"
         ports:
         - name: http
           containerPort: 9127
