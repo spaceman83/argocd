@@ -7,6 +7,7 @@ resources:
   - deployment.yaml
   - service/service.yaml
   - exporters/pgbouncer-exporter/deployment.yaml
+  - exporters/pgbouncer-exporter/service.yaml
 
 configMapGenerator:
   - name: script-exporter-config
