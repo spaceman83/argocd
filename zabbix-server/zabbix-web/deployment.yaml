@@ -27,9 +27,6 @@ spec:
       containers:
         - name: zabbix-web
           image: zabbix/zabbix-web-nginx-pgsql:6.0.17-alpine
-          ports:
-#          - name: http
-          - containerPort: 8080
           resources:
             limits:
               cpu: "1"
@@ -37,17 +34,14 @@ spec:
             requests:
               cpu: "1"
               memory: 512M
+          ports:
+          - containerPort: 8080
+          envFrom:
+          - secretRef:
+            name: zabbixdb
           env:
           - name: ZBX_SERVER_HOST
             value: "zabbix-server-svc"
           - name: ZBX_SERVER_PORT
             value: "10051"
-          - name: DB_SERVER_HOST
-            value: "192.168.103.10"
-          - name: DB_SERVER_PORT
-            value: "5000"
-          - name: POSTGRES_USER
-            value: "zabbix"
-          - name: POSTGRES_PASSWORD
-            value: "zabbix"
   revisionHistoryLimit: 1

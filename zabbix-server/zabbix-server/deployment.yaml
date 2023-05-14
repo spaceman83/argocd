@@ -18,26 +18,21 @@ spec:
         ports:
         - name: zabbix-trapper
           containerPort: 10051
-#        resources:    
-#          requests:
-#            cpu: 300m
-#            memory: 400Mi
-#          limits:
-#            cpu: 4
-#            memory: 1000Mi    
+        resources:    
+          requests:
+            cpu: 300m
+            memory: 400Mi
+          limits:
+            cpu: 4
+            memory: 1000Mi    
+        envFrom:
+        - secretRef:
+          name: zabbixdb
         env:
         - name: PHP_TZ
           value: "Europe/Stockholm"
         - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
           value: "true"
-        - name: DB_SERVER_HOST
-          value: "192.168.103.10"
-        - name: DB_SERVER_PORT
-          value: "5000"
-        - name: POSTGRES_USER
-          value: "zabbix"
-        - name: POSTGRES_PASSWORD
-          value: "zabbix"
         - name: ZBX_CACHESIZE
           value: "1024M"
         - name: ZBX_TRENDCACHESIZE
