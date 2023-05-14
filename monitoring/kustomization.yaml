@@ -23,10 +23,10 @@ resources:
 configMapGenerator:
   - name: script-exporter-config
     files:
-    - script-exporter/config.yaml
+    - exporters/script-exporter/config.yaml
   - name: script-exporter-script1
     files:
-    - script-exporter/script1.sh
+    - exporters/script-exporter/script1.sh
 
 
 generatorOptions:
