@@ -35,3 +35,13 @@ metadata:
 spec:
   addresses:
   - 192.168.201.0/32
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool05-mailsecret-bgp
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.201.21/32
+  autoAssign: false

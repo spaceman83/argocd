@@ -8,4 +8,5 @@ spec:
   - pool02-traefik-bgp
   - pool03
   - pool04
+  - pool05-mailsecret-bgp
   aggregationLength: 32
