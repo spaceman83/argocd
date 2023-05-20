@@ -7,14 +7,15 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`prometheus-short.k8s.lenin.nu`)
-      kind: Rule
-      middlewares:
-      - name: httpsredirect
-      services:
-      - name: prometheus-shortterm-svc
-        port: 9090
-        namespace: tools
+  - match: Host(`prometheus-short.k8s.lenin.nu`)
+    kind: Rule
+    middlewares:
+    - name: httpsredirect
+    - name: ipwhitelist-privnets
+    services:
+    - name: prometheus-shortterm-svc
+      port: 9090
+      namespace: tools
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -29,6 +30,8 @@ spec:
   routes:
   - match: Host(`prometheus-short.k8s.lenin.nu`)
     kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
     services:
     - name: prometheus-shortterm-svc
       port: 9090
@@ -43,14 +46,15 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`prometheus.k8s.lenin.nu`)
-      kind: Rule
-      middlewares:
-      - name: httpsredirect
-      services:
-      - name: prometheus-svc
-        port: 9090
-        namespace: tools
+  - match: Host(`prometheus.k8s.lenin.nu`)
+    kind: Rule
+    middlewares:
+    - name: httpsredirect
+    - name: ipwhitelist-privnets
+    services:
+    - name: prometheus-svc
+      port: 9090
+      namespace: tools
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -65,6 +69,8 @@ spec:
   routes:
   - match: Host(`prometheus.k8s.lenin.nu`)
     kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
     services:
     - name: prometheus-svc
       port: 9090

@@ -10,7 +10,8 @@ spec:
   - match: Host(`argocd.k8s.lenin.nu`) 
     kind: Rule
     middlewares:
-      - name: httpsredirect
+    - name: httpsredirect
+    - name: ipwhitelist-privnets
     services:
     - name: argocd-server
       port: 80
@@ -25,18 +26,22 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - kind: Rule
-      match: Host(`argocd.k8s.lenin.nu`)
-      priority: 10
-      services:
-        - name: argocd-server
-          port: 80
-    - kind: Rule
-      match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
-      priority: 11
-      services:
-        - name: argocd-server
-          port: 80
-          scheme: h2c
+  - kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
+    match: Host(`argocd.k8s.lenin.nu`)
+    priority: 10
+    services:
+    - name: argocd-server
+      port: 80
+  - kind: Rule
+    match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
+    middlewares:
+    - name: ipwhitelist-privnets
+    priority: 11
+    services:
+    - name: argocd-server
+      port: 80
+      scheme: h2c
   tls:
     certResolver: default

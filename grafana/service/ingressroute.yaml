@@ -7,14 +7,14 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`grafana.k8s.lenin.nu`)
-      kind: Rule
-      middlewares:
-      - name: httpsredirect
-      services:
-      - name: grafana
-        port: 3000
-        namespace: tools
+  - match: Host(`grafana.k8s.lenin.nu`)
+    kind: Rule
+    middlewares:
+  - name: ipwhitelist-privnets
+    services:
+    - name: grafana
+      port: 3000
+      namespace: tools
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -29,6 +29,8 @@ spec:
   routes:
   - match: Host(`grafana.k8s.lenin.nu`)
     kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
     services:
     - name: grafana
       port: 3000
