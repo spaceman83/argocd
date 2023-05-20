@@ -20,4 +20,4 @@ ports:
 tlsStore:
   default:
     defaultCertificate:
-      secretName: k8s-lenin-nu-cert
+      secretName: prod-k8s-lenin-nu-cert
