@@ -1,0 +1,31 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: pravda-http
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`pravda.lenin.nu`)
+    kind: Rule
+    middlewares:
+    - name: httpsredirect
+    services:
+    - name: pravda-svc
+      port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: pravda-https
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: 
+  routes:
+  - match: Host(`pravda.lenin.nu`)
+    kind: Rule
+    services:
+    - name: pravda-svc
+      port: 80

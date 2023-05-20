@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pravda
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: pravda
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: pravda
+    spec:
+      containers:
+      - name: pravda
+        image: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: html
+          mountPath: "/usr/share/nginx/html"
+          readOnly: true
+        resources:
+          limits:
+            cpu: "1"
+            memory: 512M
+          requests:
+            cpu: "1"
+            memory: 512M
+      volumes:
+        - name: html
+          configMap:
+            name: html-pravda-index
