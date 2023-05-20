@@ -11,7 +11,7 @@ spec:
     kind: Rule
     middlewares:
     - name: httpsredirect
-    - name: yopass-ipwhitelist
+#    - name: yopass-ipwhitelist
     services:
     - name: yopass-svc
       port: 1337
@@ -30,8 +30,8 @@ spec:
   routes:
   - match: Host(`yopass.k8s.lenin.nu`)
     kind: Rule
-    middlewares:
-    - name: yopass-ipwhitelist
+#    middlewares:
+#    - name: yopass-ipwhitelist
     services:
     - name: yopass-svc
       port: 1337
