@@ -9,4 +9,5 @@ spec:
   - pool03
   - pool04
   - pool05-mailsecret-bgp
+  - pool06-sabbatsecret-bgp
   aggregationLength: 32

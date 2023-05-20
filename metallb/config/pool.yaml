@@ -45,3 +45,13 @@ spec:
   addresses:
   - 192.168.201.21/32
   autoAssign: false
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool06-sabbatsecret-bgp
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.201.22/32
+  autoAssign: false
