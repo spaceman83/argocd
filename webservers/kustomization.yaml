@@ -10,3 +10,6 @@ configMapGenerator:
   - name: html-pravda-index
     files:
     - pravda/index.html
+
+generatorOptions:
+  disableNameSuffixHash: true
