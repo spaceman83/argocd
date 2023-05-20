@@ -6,13 +6,14 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`zabbix.k8s.lenin.nu`)
-      kind: Rule
-      middlewares:
-      - name: httpsredirect
-      services:
-      - name: zabbix-web-svc
-        port: 80
+  - match: Host(`zabbix.k8s.lenin.nu`)
+    kind: Rule
+    middlewares:
+    - name: httpsredirect
+    - name: ipwhitelist-privnets
+    services:
+    - name: zabbix-web-svc
+      port: 80
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -26,6 +27,8 @@ spec:
   routes:
   - match: Host(`zabbix.k8s.lenin.nu`)
     kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
     services:
     - name: zabbix-web-svc
       port: 80
