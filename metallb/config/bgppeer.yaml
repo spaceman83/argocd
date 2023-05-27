@@ -27,18 +27,3 @@ spec:
     - key: kubernetes.io/hostname
       operator: In
       values: [k8s-worker-01, k8s-worker-02, k8s-worker-03]
----
-apiVersion: metallb.io/v1beta2
-kind: BGPPeer
-metadata:
-  name: bgppeer-opnsense
-  namespace: metallb-system
-spec:
-  myASN: 64500
-  peerASN: 65000
-  peerAddress: 192.168.100.1
-  nodeSelectors:
-  - matchExpressions:
-    - key: kubernetes.io/hostname
-      operator: In
-      values: [k8s-worker-01, k8s-worker-02, k8s-worker-03]
