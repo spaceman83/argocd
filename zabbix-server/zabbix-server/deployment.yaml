@@ -33,8 +33,8 @@ spec:
           value: "Europe/Stockholm"
         - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
           value: "true"
-#        - name: ZBX_CACHESIZE
-#          value: "1024M"
+        - name: ZBX_CACHESIZE
+          value: "128M"
 #        - name: ZBX_TRENDCACHESIZE
 #          value: "1024M"
 #        - name: ZBX_HISTORYCACHESIZE
