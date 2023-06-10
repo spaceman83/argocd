@@ -61,5 +61,7 @@ spec:
 #          value: "5"
 #        - name: ZBX_STARTESCALATORS
 #          value: "5"
+        - name: ZBX_DEBUGLEVEL
+          value: "4"
       restartPolicy: Always
   revisionHistoryLimit: 1
