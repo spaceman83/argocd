@@ -67,7 +67,9 @@ zabbixProxy:
       value: false
     ## How often proxy retrieves configuration data from Zabbix server in seconds. Active proxy parameter. Ignored for passive proxies.
     - name: ZBX_CONFIGFREQUENCY
-      value: 60
+      value: 600
+    - name: ZBX_STARTDBSYNCERS
+      value: 8
     ## List can be extended with other environment variables listed here: https://github.com/zabbix/zabbix-docker/tree/6.0/Dockerfiles/proxy-sqlite3/alpine#other-variables
     ## For example:
     ## The variable is list of comma separated loadable Zabbix modules.
