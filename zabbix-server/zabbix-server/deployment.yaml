@@ -34,13 +34,13 @@ spec:
         - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
           value: "true"
         - name: ZBX_CACHESIZE
-          value: "128M"
+          value: "128M" #default 8M
 #        - name: ZBX_TRENDCACHESIZE
-#          value: "1024M"
+#          value: "1024M" #Default 4M
 #        - name: ZBX_HISTORYCACHESIZE
-#          value: "2048M"
+#          value: "2048M" # Default 16M
 #        - name: ZBX_HISTORYINDEXCACHESIZE
-#          value: "1024M"
+#          value: "1024M" # Default 4m
 #        - name: ZBX_STARTTRAPPERS
 #          value: "5"
 #        - name: ZBX_STARTPREPROCESSORS
