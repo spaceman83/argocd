@@ -33,30 +33,30 @@ spec:
           value: "Europe/Stockholm"
         - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
           value: "true"
-        - name: ZBX_CACHESIZE
-          value: "1024M"
-        - name: ZBX_TRENDCACHESIZE
-          value: "1024M"
-        - name: ZBX_HISTORYCACHESIZE
-          value: "2048M"
-        - name: ZBX_HISTORYINDEXCACHESIZE
-          value: "1024M"
+#        - name: ZBX_CACHESIZE
+#          value: "1024M"
+#        - name: ZBX_TRENDCACHESIZE
+#          value: "1024M"
+#        - name: ZBX_HISTORYCACHESIZE
+#          value: "2048M"
+#        - name: ZBX_HISTORYINDEXCACHESIZE
+#          value: "1024M"
         - name: ZBX_STARTTRAPPERS
           value: "5"
         - name: ZBX_STARTPREPROCESSORS
           value: "10"
         - name: ZBX_STARTDBSYNCERS
           value: "10"
-        - name: ZBX_JAVAGATEWAY_ENABLE
-          value: "true"
-        - name: ZBX_STARTJAVAPOLLERS
-          value: "5"
+#        - name: ZBX_JAVAGATEWAY_ENABLE
+#          value: "true"
+#        - name: ZBX_STARTJAVAPOLLERS
+#          value: "5"
         - name: ZBX_ENABLE_SNMP_TRAPS
           value: "true"
         - name: ZBX_STARTPROXYPOLLERS
-          value: "5"
+          value: "10"
         - name: ZBX_PROXYCONFIGFREQUENCY
-          value: "60"              
+          value: "600"              
         - name: ZBX_STARTHTTPPOLLERS
           value: "5"
         - name: ZBX_STARTESCALATORS
