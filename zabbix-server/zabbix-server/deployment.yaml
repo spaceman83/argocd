@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zabbix-server
-        image: zabbix/zabbix-server-pgsql:6.0.17-alpine
+        image: zabbix/zabbix-server-pgsql:6.0.18-alpine
         ports:
         - name: zabbix-trapper
           containerPort: 10051
@@ -63,5 +63,7 @@ spec:
 #          value: "5"
         - name: ZBX_DEBUGLEVEL
           value: "3"
+        - name: ZBX_CACHEUPDATEFREQUENCY
+          value: "60"
       restartPolicy: Always
   revisionHistoryLimit: 1
