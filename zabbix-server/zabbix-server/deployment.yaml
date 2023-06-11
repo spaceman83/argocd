@@ -74,6 +74,6 @@ spec:
         - name: ZBX_DEBUGLEVEL
           value: "3"
         - name: ZBX_LOGSLOWQUERIES
-          value: "1000"
+          value: "10000"
       restartPolicy: Always
   revisionHistoryLimit: 1
