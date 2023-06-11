@@ -28,13 +28,13 @@ spec:
         ports:
         - name: zabbix-trapper
           containerPort: 10051
-#        resources:    
-#          requests:
-#            cpu: 500m
-#            memory: 500Mi
-#          limits:
-#            cpu: 1000m
-#            memory: 1000Mi    
+        resources:    
+          requests:
+            cpu: 500m
+            memory: 500Mi
+          limits:
+            cpu: 1000m
+            memory: 1000Mi    
         envFrom:
         - secretRef:
             name: zabbixdb
@@ -45,35 +45,19 @@ spec:
           value: "true"
         - name: ZBX_CACHESIZE
           value: "64M" #default 8M
-#        - name: ZBX_TRENDCACHESIZE
-#          value: "1024M" #Default 4M
-#        - name: ZBX_HISTORYCACHESIZE
-#          value: "2048M" # Default 16M
-#        - name: ZBX_HISTORYINDEXCACHESIZE
-#          value: "1024M" # Default 4m
-#        - name: ZBX_STARTTRAPPERS
-#          value: "5"
-#        - name: ZBX_STARTPREPROCESSORS
-#          value: "10"
+        - name: ZBX_TRENDCACHESIZE
+          value: "4M" #Default 4M
+        - name: ZBX_HISTORYCACHESIZE
+          value: "16M" # Default 16M
+        - name: ZBX_HISTORYINDEXCACHESIZE
+          value: "4M" # Default 4m
         - name: ZBX_STARTDBSYNCERS
           value: "4" #Default 4
-#        - name: ZBX_JAVAGATEWAY_ENABLE
-#          value: "true"
-#        - name: ZBX_STARTJAVAPOLLERS
-#          value: "5"
-        - name: ZBX_ENABLE_SNMP_TRAPS
-          value: "true"
-#        - name: ZBX_STARTPROXYPOLLERS
-#          value: "10"
         - name: ZBX_PROXYCONFIGFREQUENCY
-          value: "600"              
-#        - name: ZBX_STARTHTTPPOLLERS
-#          value: "5"
-#        - name: ZBX_STARTESCALATORS
-#          value: "5"
+          value: "120"              
         - name: ZBX_DEBUGLEVEL
           value: "3"
         - name: ZBX_LOGSLOWQUERIES
-          value: "10000"
+          value: "3000"
       restartPolicy: Always
   revisionHistoryLimit: 1
