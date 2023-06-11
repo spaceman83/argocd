@@ -11,17 +11,17 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: zabbix-server
-    affinity:
-      nodeAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          nodeSelectorTerms:
-          - matchExpressions:
-            - key: name
-              operator: In
-              values:
-              - k8s-worker-02
-              - k8s-worker-03
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: name
+                operator: In
+                values:
+                - k8s-worker-02
+                - k8s-worker-03
       containers:
       - name: zabbix-server
         image: zabbix/zabbix-server-pgsql:6.0.18-alpine
