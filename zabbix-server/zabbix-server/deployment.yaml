@@ -41,10 +41,10 @@ spec:
         env:
         - name: PHP_TZ
           value: "Europe/Stockholm"
-#        - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
-#          value: "true"
+        - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
+          value: "true"
         - name: ZBX_CACHESIZE
-          value: "128M" #default 8M
+          value: "64M" #default 8M
 #        - name: ZBX_TRENDCACHESIZE
 #          value: "1024M" #Default 4M
 #        - name: ZBX_HISTORYCACHESIZE
@@ -56,7 +56,7 @@ spec:
 #        - name: ZBX_STARTPREPROCESSORS
 #          value: "10"
         - name: ZBX_STARTDBSYNCERS
-          value: "4" #Default 4
+          value: "8" #Default 4
 #        - name: ZBX_JAVAGATEWAY_ENABLE
 #          value: "true"
 #        - name: ZBX_STARTJAVAPOLLERS
