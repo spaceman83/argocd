@@ -28,13 +28,13 @@ spec:
         ports:
         - name: zabbix-trapper
           containerPort: 10051
-        resources:    
-          requests:
-            cpu: 500m
-            memory: 500Mi
-          limits:
-            cpu: 1000m
-            memory: 1000Mi    
+#        resources:    
+#          requests:
+#            cpu: 500m
+#            memory: 500Mi
+#          limits:
+#            cpu: 1000m
+#            memory: 1000Mi    
         envFrom:
         - secretRef:
             name: zabbixdb
