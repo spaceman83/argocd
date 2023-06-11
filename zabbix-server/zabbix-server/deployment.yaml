@@ -17,7 +17,7 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: name
+              - key: hostname
                 operator: In
                 values:
                 - k8s-worker-02
