@@ -56,7 +56,7 @@ spec:
 #        - name: ZBX_STARTPREPROCESSORS
 #          value: "10"
         - name: ZBX_STARTDBSYNCERS
-          value: "8" #Default 4
+          value: "4" #Default 4
 #        - name: ZBX_JAVAGATEWAY_ENABLE
 #          value: "true"
 #        - name: ZBX_STARTJAVAPOLLERS
@@ -73,7 +73,5 @@ spec:
 #          value: "5"
         - name: ZBX_DEBUGLEVEL
           value: "3"
-        - name: ZBX_CACHEUPDATEFREQUENCY
-          value: "60"
       restartPolicy: Always
   revisionHistoryLimit: 1
