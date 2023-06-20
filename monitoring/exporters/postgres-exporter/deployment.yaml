@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: postgres-exporter-01
-        image: prometheuscommunity/postgres-exporter:v0.12.0
+        image: prometheuscommunity/postgres-exporter:v0.12.1
         ports:
         - name: http
           containerPort: 9187
@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: postgres-exporter-02
-        image: prometheuscommunity/postgres-exporter:v0.12.0
+        image: prometheuscommunity/postgres-exporter:v0.12.1
         ports:
         - name: http
           containerPort: 9187
@@ -80,7 +80,7 @@ spec:
     spec:
       containers:
       - name: postgres-exporter-03
-        image: prometheuscommunity/postgres-exporter:v0.12.0
+        image: prometheuscommunity/postgres-exporter:v0.12.1
         ports:
         - name: http
           containerPort: 9187
