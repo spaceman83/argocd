@@ -22,11 +22,11 @@ spec:
           readOnly: true
         resources:
           limits:
-            cpu: "1"
-            memory: 512M
+            cpu: "100"
+            memory: 128M
           requests:
-            cpu: "1"
-            memory: 512M
+            cpu: "100"
+            memory: 64M
       volumes:
         - name: html
           configMap:
