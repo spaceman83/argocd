@@ -23,10 +23,10 @@ spec:
           resources:
             limits:
               cpu: "500m"
-              memory: 512M
+              memory: 256M
             requests:
               cpu: "500m"
-              memory: 512M
+              memory: 128M
           envFrom:
           - secretRef:
               name: postfixadmindb
