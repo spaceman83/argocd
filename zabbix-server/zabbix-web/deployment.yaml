@@ -29,11 +29,11 @@ spec:
           image: zabbix/zabbix-web-nginx-pgsql:6.0.18-alpine
           resources:
             limits:
-              cpu: 100m
-              memory: 128M
-            requests:
               cpu: 1
               memory: 512M
+            requests:
+              cpu: 100m
+              memory: 128M
           ports:
           - containerPort: 8080
           envFrom:
