@@ -34,11 +34,11 @@ spec:
           subPath: chatEnabled.toml
         resources: 
           limits:
-            cpu: 500m
-            memory: 500Mi
+            cpu: 200m
+            memory: 128m
           requests:
             cpu: 500m
-            memory: 500Mi
+            memory: 500m
       restartPolicy: Always
       volumes:
       - name: ts3-bot-config
