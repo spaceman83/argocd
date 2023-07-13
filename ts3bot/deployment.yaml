@@ -35,10 +35,10 @@ spec:
         resources: 
           limits:
             cpu: 400m
-            memory: 256m
+            memory: 256M
           requests:
             cpu: 200m
-            memory: 128m
+            memory: 128M
       restartPolicy: Always
       volumes:
       - name: ts3-bot-config
