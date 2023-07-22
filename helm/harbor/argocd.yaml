@@ -1,0 +1,79 @@
+project: default
+source:
+  repoURL: 'https://helm.goharbor.io'
+  targetRevision: 1.12.2
+  helm:
+    parameters:
+      - name: expose.ingress.annotations.ingress.kubernetes.io/ssl-redirect
+        value: 'false'
+      - name: expose.ingress.annotations.nginx.ingress.kubernetes.io/ssl-redirect
+        value: 'false'
+      - name: expose.ingress.hosts.notary
+        value: harbor-notary.k8s.lenin.nu
+      - name: expose.tls.enabled
+        value: 'false'
+      - name: expose.type
+        value: clusterIP
+      - name: externalURL
+        value: 'https://harbor.k8s.lenin.nu'
+      - name: persistence.persistentVolumeClaim.registry.size
+        value: 15Gi
+  chart: harbor
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: harbor
+syncPolicy:
+  automated: {}
+  syncOptions:
+    - CreateNamespace=true
+ignoreDifferences:
+  - kind: Secret
+    name: harbor-core
+    jsonPointers:
+      - /data/CSRF_KEY
+      - /data/secret
+      - /data/tls.crt
+      - /data/tls.key
+  - kind: Secret
+    name: harbor-jobservice
+    jsonPointers:
+      - /data/JOBSERVICE_SECRET
+  - kind: Secret
+    name: harbor-notary-server
+    jsonPointers:
+      - /data/ca.crt
+      - /data/tls.crt
+      - /data/tls.key
+  - kind: Secret
+    name: harbor-registry
+    jsonPointers:
+      - /data/REGISTRY_HTTP_SECRET
+  - kind: Secret
+    name: harbor-registry-htpasswd
+    jsonPointers:
+      - /data/REGISTRY_HTPASSWD
+  - group: apps
+    kind: Deployment
+    name: harbor-core
+    jsonPointers:
+      - /spec/template/metadata/annotations
+  - group: apps
+    kind: Deployment
+    name: harbor-notary-server
+    jsonPointers:
+      - /spec/template/metadata/annotations
+  - group: apps
+    kind: Deployment
+    name: harbor-notary-signer
+    jsonPointers:
+      - /spec/template/metadata/annotations
+  - group: apps
+    kind: Deployment
+    name: harbor-jobservice
+    jsonPointers:
+      - /spec/template/metadata/annotations
+  - group: apps
+    kind: Deployment
+    name: harbor-registry
+    jsonPointers:
+      - /spec/template/metadata/annotations
