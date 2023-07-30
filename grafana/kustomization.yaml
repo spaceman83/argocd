@@ -3,3 +3,4 @@ resources:
  - service/service.yaml
  - service/ingressroute.yaml
  - deployment.yaml
+ - service/certificate.yaml
