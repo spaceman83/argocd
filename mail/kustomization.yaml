@@ -7,6 +7,7 @@ resources:
   - postfixadmin/service.yaml
   - postfixadmin/ingressroute.yaml
   - postfixadmin/middleware.yaml
+  - postfixadmin/certificate.yaml
 
 generatorOptions:
   disableNameSuffixHash: true

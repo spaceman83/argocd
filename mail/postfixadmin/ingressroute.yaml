@@ -23,7 +23,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: 
+    secretName: postfixadmin-k8s-lenin-nu
   routes:
   - match: Host(`postfixadmin.k8s.lenin.nu`)
     kind: Rule
