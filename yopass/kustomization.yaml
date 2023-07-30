@@ -9,3 +9,4 @@ resources:
   - yopass/yopass-ingress.yaml
   - yopass/deployment.yaml
   - redis/deployment.yaml
+  - yopass/certificate.yaml
