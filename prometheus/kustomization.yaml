@@ -5,6 +5,7 @@ resources:
  - service/service.yaml
  - service/ingressroute.yaml
  - service/middlewares.yaml
+ - service/certificate.yaml
 
 configMapGenerator:
   - name: prometheus-server-conf-shortterm
