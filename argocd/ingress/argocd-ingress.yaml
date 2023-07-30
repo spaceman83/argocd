@@ -44,4 +44,4 @@ spec:
       port: 80
       scheme: h2c
   tls:
-    certResolver: default
+    certResolver: secret-argocd-k8s-lenin-nu
