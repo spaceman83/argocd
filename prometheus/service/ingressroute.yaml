@@ -26,7 +26,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: 
+    secretName: secret-prometheus-shortterm-k8s-lenin-nu
   routes:
   - match: Host(`prometheus-short.k8s.lenin.nu`)
     kind: Rule
@@ -65,7 +65,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: 
+    secretName: secret-prometheus-k8s-lenin-nu
   routes:
   - match: Host(`prometheus.k8s.lenin.nu`)
     kind: Rule

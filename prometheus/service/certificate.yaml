@@ -1,0 +1,27 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata: 
+  name: cert-prometheus-k8s-lenin-nu
+spec:
+  dnsNames:
+    - "prometheus.k8s.lenin.nu"
+  secretName: secret-prometheus-k8s-lenin-nu
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  privateKey:
+    rotationPolicy: Always
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata: 
+  name: cert-prometheus-shortterm-k8s-lenin-nu
+spec:
+  dnsNames:
+    - "prometheus-shortterm.k8s.lenin.nu"
+  secretName: secret-prometheus-shortterm-k8s-lenin-nu
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  privateKey:
+    rotationPolicy: Always
