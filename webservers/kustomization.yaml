@@ -5,7 +5,7 @@ resources:
   - pravda/deployment.yaml
   - pravda/services.yaml
   - pravda/ingressroute.yaml
-
+  - pravda/certificate.yaml
 configMapGenerator:
   - name: html-pravda-index
     files:

@@ -22,7 +22,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: 
+    secretName: secret-pravda-lenin-nu
   routes:
   - match: Host(`pravda.lenin.nu`)
     kind: Rule
