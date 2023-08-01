@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata: 
+  name: ceph-k8s-lenin-nu
+spec:
+  dnsNames:
+    - "ceph.k8s.lenin.nu"
+  secretName: secret-ceph-k8s-lenin-nu
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  privateKey:
+    rotationPolicy: Always
