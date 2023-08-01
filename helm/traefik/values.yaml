@@ -11,12 +11,6 @@ ports:
     protocol: TCP
     http3:
       enabled: false
-    tls:
-      enabled: true
-      options: ""
-      certResolver: ""
-      domains: 
-       - main: "*.k8s.lenin.nu"
 tlsStore:
   default:
     defaultCertificate:
