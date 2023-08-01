@@ -25,6 +25,8 @@ metadata:
 spec:
   entryPoints:
     - websecure
+  tls:
+    certResolver: secret-argocd-k8s-lenin-nu
   routes:
   - kind: Rule
     middlewares:
@@ -43,5 +45,3 @@ spec:
     - name: argocd-server
       port: 80
       scheme: h2c
-  tls:
-    certResolver: secret-argocd-k8s-lenin-nu
