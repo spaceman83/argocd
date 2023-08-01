@@ -31,7 +31,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: cert-harbor-notary-k8s-lenin-nu
+    secretName: secret-harbor-notary-k8s-lenin-nu
   routes:
   - match: Host(`harbor-notary.k8s.lenin.nu`)
     kind: Rule
