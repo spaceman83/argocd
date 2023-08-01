@@ -45,32 +45,3 @@ spec:
       scheme: h2c
   tls:
     certResolver: secret-argocd-k8s-lenin-nu
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: argocd-https2
-  namespace: argocd
-spec:
-  entryPoints:
-    - websecure
-  routes:
-  - kind: Rule
-    middlewares:
-    - name: ipwhitelist-privnets
-    match: Host(`argocd.k8s.lenin.nu`)
-    priority: 10
-    services:
-    - name: argocd-server
-      port: 80
-  - kind: Rule
-    match: Host(`argocd.k8s.lenin.nu`)
-    middlewares:
-    - name: ipwhitelist-privnets
-    priority: 11
-    services:
-    - name: argocd-server
-      port: 80
-      scheme: h2c
-  tls:
-    certResolver: secret-argocd-k8s-lenin-nu
