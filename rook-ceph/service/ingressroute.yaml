@@ -29,6 +29,8 @@ spec:
   routes:
   - match: Host(`ceph.k8s.lenin.nu`)
     kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
     services:
     - name: rook-ceph-mgr-dashboard
       port: 8443
