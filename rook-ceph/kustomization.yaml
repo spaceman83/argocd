@@ -11,4 +11,4 @@ resources:
   - addons/toolbox.yaml
   - service/ingressroute.yaml
   - service/middleware.yaml
-  - serice/certificate.yaml
+  - service/certificate.yaml
