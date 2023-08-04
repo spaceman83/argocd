@@ -23,7 +23,7 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: 
+    secretName: secret-zabbix-k8s-lenin-nu
   routes:
   - match: Host(`zabbix.k8s.lenin.nu`)
     kind: Rule
