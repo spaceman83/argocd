@@ -24,7 +24,7 @@ spec:
                 - k8s-worker-03
       containers:
       - name: zabbix-server
-        image: zabbix/zabbix-server-pgsql:6.0.20-alpine
+        image: zabbix/zabbix-server-pgsql:6.0.21-alpine
         ports:
         - name: zabbix-trapper
           containerPort: 10051
