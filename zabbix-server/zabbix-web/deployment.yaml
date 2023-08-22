@@ -14,16 +14,16 @@ spec:
       labels:
         app.kubernetes.io/name: zabbix-web
     spec:
-#      affinity:
-#        podAntiAffinity:
-#          requiredDuringSchedulingIgnoredDuringExecution:
-#          - labelSelector:
-#              matchExpressions:
-#              - key: name
-#                operator: In
-#                values:
-#                - zabbix-web
-#            topologyKey: "kubernetes.io/hostname"
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: name
+                operator: In
+                values:
+                - zabbix-web
+            topologyKey: "kubernetes.io/hostname"
       containers:
         - name: zabbix-web
           image: zabbix/zabbix-web-nginx-pgsql:6.0.21-alpine
