@@ -44,4 +44,6 @@ spec:
             value: "zabbix-server-svc"
           - name: ZBX_SERVER_PORT
             value: "10051"
+          - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
+            value: "true"
   revisionHistoryLimit: 1
