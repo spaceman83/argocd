@@ -30,10 +30,10 @@ spec:
             - containerPort: 9090
           resources:
             requests:
-              cpu: 500m
+              cpu: 100m
               memory: 500M
             limits:
-              cpu: 1
+              cpu: 100m
               memory: 1Gi
           volumeMounts:
             - name: prometheus-config-volume
@@ -58,7 +58,7 @@ spec:
             name: prometheus-server-conf-shortterm
         - name: prometheus-storage-volume
           emptyDir:
-            sizeLimit: 600Mi
+            sizeLimit: 800Mi
   revisionHistoryLimit: 1
 ---
 apiVersion: apps/v1
