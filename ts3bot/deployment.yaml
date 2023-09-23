@@ -18,7 +18,8 @@ spec:
     spec:
       containers:
       - name: ts3bot
-        image:  ancieque/ts3audiobot:0.12.0
+#        image:  ancieque/ts3audiobot:0.12.0
+        image:  ancieque/ts3audiobot:0.12.0cmdrlenin/ts3audiobot3.1:0.12.0
         volumeMounts:
         - name: ts3-bot-config
           mountPath: /app/data/rights.toml
