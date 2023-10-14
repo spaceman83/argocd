@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: zabbix-proxy-en
-  namespace: zabbix
+  namespace: zabbix-server
   annotations:
     metallb.universe.tf/address-pool: pool07-zabbixproxy-bgp
 spec:
