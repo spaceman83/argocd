@@ -212,7 +212,7 @@ zabbixAgent:
   env:
       ## Zabbix server host
     - name: ZBX_SERVER_HOST
-      value: "127.0.0.1"
+      value: "192.168.100.0/24"
       ## Zabbix server port
     - name: ZBX_SERVER_PORT
       value: 10051
@@ -246,7 +246,7 @@ zabbixAgent:
 
   ## Tolerations configurations
   tolerations:
-    - effect: NoSchedule
+    - effect: Schedule
       key: node-role.kubernetes.io/control-plane
   ## Affinity configurations
   affinity: {}
