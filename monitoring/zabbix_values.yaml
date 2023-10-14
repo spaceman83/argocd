@@ -67,7 +67,7 @@ zabbixProxy:
       value: false
     ## How often proxy retrieves configuration data from Zabbix server in seconds. Active proxy parameter. Ignored for passive proxies.
     - name: ZBX_CONFIGFREQUENCY
-      value: 600
+      value: 60
     ## List can be extended with other environment variables listed here: https://github.com/zabbix/zabbix-docker/tree/6.0/Dockerfiles/proxy-sqlite3/alpine#other-variables
     ## For example:
     ## The variable is list of comma separated loadable Zabbix modules.
@@ -76,7 +76,8 @@ zabbixProxy:
 
 
   service:
-    annotations: {}
+    annotations: 
+      metallb.universe.tf/address-pool: pool07-zabbixproxy-bgp
     labels: {}
     ## Type of service for Zabbix proxy
     type: ClusterIP
@@ -87,7 +88,8 @@ zabbixProxy:
     ## Zabbix proxy Ingress externalIPs with optional path
     ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
     ## Must be provided if ProxyMode is set to passive mode
-    externalIPs: []
+    externalIPs: 
+      - 192.168.201.23
     ## Loadbalancer IP
     ## Only use if service.type is "LoadBalancer"
     ##
