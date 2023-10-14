@@ -8,6 +8,7 @@ metadata:
 spec:
   type: ExternalName
   externalName: zabbix-proxy.zabbix-agent
+  loadBalancerIP: 192.168.201.23
   ports:
     - name: zabbix
       port: 10050
