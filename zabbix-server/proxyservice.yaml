@@ -8,8 +8,9 @@ metadata:
 spec:
   type: ExternalName
   externalName: zabbix-proxy.zabbix-agent
-  externalIP: 192.168.201.23
   ports:
     - name: zabbix
       port: 10050
       protocol: TCP
+  externalIPs:
+    - 192.168.201.23
