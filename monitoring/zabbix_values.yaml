@@ -92,7 +92,8 @@ zabbixProxy:
     ## Loadbalancer IP
     ## Only use if service.type is "LoadBalancer"
     ##
-    externalTrafficPolicy: Local
+    spec: 
+      externalTrafficPolicy: Local
     loadBalancerIP: 192.168.201.23
     loadBalancerSourceRanges: []
 
