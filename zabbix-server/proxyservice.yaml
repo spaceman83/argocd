@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zabbix-proxy-svc
+  namespace: zabbix
+  annotations:
+    metallb.universe.tf/address-pool: pool07-zabbixproxy-bgp
+spec:
+  type: ExternalName
+  externalName: zabbix-proxy.zabbix-agent
+  ports:
+    - name: zabbix
+      port: 10050
+      protocol: TCP
