@@ -80,7 +80,7 @@ zabbixProxy:
       metallb.universe.tf/address-pool: pool07-zabbixproxy-bgp
     labels: {}
     ## Type of service for Zabbix proxy
-    type: ClusterIP
+    type: LoadBalancer
     ## Port to expose service
     port: 10051
     ## Port of application pod
@@ -88,12 +88,12 @@ zabbixProxy:
     ## Zabbix proxy Ingress externalIPs with optional path
     ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
     ## Must be provided if ProxyMode is set to passive mode
-    externalIPs: 
-      - 192.168.201.23
+    externalIPs: {}
     ## Loadbalancer IP
     ## Only use if service.type is "LoadBalancer"
     ##
-    loadBalancerIP: ""
+    externalTrafficPolicy: Local
+    loadBalancerIP: 192.168.201.23
     loadBalancerSourceRanges: []
 
 
