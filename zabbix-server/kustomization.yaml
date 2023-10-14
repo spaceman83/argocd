@@ -9,6 +9,5 @@ resources:
  - zabbix-web/service/service.yaml
  - zabbix-web/service/ingressroute.yaml
  - zabbix-web/service/certificate.yaml
- - proxyservice.yaml
 generatorOptions:
   disableNameSuffixHash: true
