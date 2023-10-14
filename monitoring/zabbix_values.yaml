@@ -245,9 +245,12 @@ zabbixAgent:
     kubernetes.io/os: linux
 
   ## Tolerations configurations
-#  tolerations:
-#    - effect: NoSchedule
-#      key: node-role.kubernetes.io/control-plane
+  tolerations:
+    - key: node-role.kubernetes.io/control-plane
+      effect: NoSchedule
+    - key: node-role.kubernetes.io/master
+      effect: NoSchedule
+      
   ## Affinity configurations
   affinity: {}
   serviceAccount:
