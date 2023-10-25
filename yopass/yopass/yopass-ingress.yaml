@@ -40,7 +40,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: yopass-http
+  name: yopass2-http
   namespace: tools
 spec:
   entryPoints:
@@ -59,7 +59,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: yopass-https
+  name: yopass2-https
   namespace: tools
 spec:
   entryPoints:
