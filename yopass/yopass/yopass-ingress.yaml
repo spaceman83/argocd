@@ -36,3 +36,42 @@ spec:
     - name: yopass-svc
       port: 1337
       namespace: tools
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: yopass-http
+  namespace: tools
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`verysecurepassword.databra007.se`)
+    kind: Rule
+    middlewares:
+    - name: httpsredirect
+#    - name: yopass-ipwhitelist
+    services:
+    - name: yopass-svc
+      port: 1337
+      namespace: tools
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: yopass-https
+  namespace: tools
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: secret--verysecurepassword-databra007-se
+  routes:
+  - match: Host(`verysecurepassword.databra007.se`)
+    kind: Rule
+#    middlewares:
+#    - name: yopass-ipwhitelist
+    services:
+    - name: yopass-svc
+      port: 1337
+      namespace: tools
