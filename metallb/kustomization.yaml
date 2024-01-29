@@ -2,11 +2,12 @@
 namespace: metallb-system
 
 resources:
-  - github.com/metallb/metallb/config/native?ref=v0.13.12
+  - github.com/metallb/metallb/config/native?ref=v0.14.2
 
   - config/pool.yaml
   - config/l2advertisement.yaml
   - config/bgpadvertisement.yaml
   - config/bgppeer.yaml
+  
 generatorOptions:
   disableNameSuffixHash: true
