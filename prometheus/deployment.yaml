@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: prometheus-shortterm
-          image: prom/prometheus:v2.49.1
+          image: prom/prometheus:v2.51.0
           args:
             - "--storage.tsdb.retention.time=2h"
             - "--config.file=/etc/prometheus/prometheus.yml"
@@ -83,7 +83,7 @@ spec:
     spec:
       containers:
         - name: prometheus
-          image: prom/prometheus:v2.49.1
+          image: prom/prometheus:v2.51.0
           args:
             - "--storage.tsdb.retention.time=180d"
             - "--config.file=/etc/prometheus.conf/prometheus.yaml"
