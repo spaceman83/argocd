@@ -26,7 +26,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"
       containers:
         - name: zabbix-web
-          image: zabbix/zabbix-web-nginx-pgsql:6.0.28-alpine
+          image: zabbix/zabbix-web-nginx-pgsql:6.0.29-alpine
           resources:
             limits:
               cpu: 1
