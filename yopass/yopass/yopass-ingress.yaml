@@ -1,4 +1,4 @@
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: yopass-http
@@ -17,7 +17,7 @@ spec:
       port: 1337
       namespace: tools
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: yopass-https
@@ -37,7 +37,7 @@ spec:
       port: 1337
       namespace: tools
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: yopass2-http
@@ -56,7 +56,7 @@ spec:
       port: 1337
       namespace: tools
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: yopass2-https

@@ -1,4 +1,4 @@
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik..io/v1alpha1
 kind: IngressRoute
 metadata:
   name: grafana-http
@@ -16,7 +16,7 @@ spec:
       port: 3000
       namespace: tools
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: grafana-https
