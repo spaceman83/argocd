@@ -12,7 +12,7 @@ kind: Middleware
 metadata:
   name: ipwhitelist-privnets
 spec:
-  ipWhiteList:
+  IPAllowList:
     sourceRange:
       - 192.168.0.0/16
       - 10.0.0.0/8
