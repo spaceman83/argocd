@@ -46,7 +46,7 @@ spec:
   - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/c/`)
     kind: Rule
     middlewares:
-    - name: ipwhitelist-privnets
+    - name: ipallowlist-privnets
     services:
     - name: harbor-core
       port: 80
