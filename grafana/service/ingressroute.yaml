@@ -10,7 +10,7 @@ spec:
   - match: Host(`grafana.k8s.lenin.nu`)
     kind: Rule
     middlewares:
-    - name: ipwhitelist-privnets
+    - name: ipallowlist-privnets
     services:
     - name: grafana
       port: 3000
@@ -30,7 +30,7 @@ spec:
   - match: Host(`grafana.k8s.lenin.nu`)
     kind: Rule
     middlewares:
-    - name: ipwhitelist-privnets
+    - name: ipallowlist-privnets
     services:
     - name: grafana
       port: 3000
