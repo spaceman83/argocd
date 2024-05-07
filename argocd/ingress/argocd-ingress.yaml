@@ -11,7 +11,7 @@ spec:
     kind: Rule
     middlewares:
     - name: httpsredirect
-    - name: ipwhitelist-privnets
+    - name: ipallowlist-privnets
     services:
     - name: argocd-server
       port: 80
@@ -30,7 +30,7 @@ spec:
   routes:
   - kind: Rule
     middlewares:
-    - name: ipwhitelist-privnets
+    - name: ipallowlist-privnets
     match: Host(`argocd.k8s.lenin.nu`)
     priority: 10
     services:
@@ -39,7 +39,7 @@ spec:
   - kind: Rule
     match: Host(`argocd.k8s.lenin.nu`) && Header(`Content-Type`, `application/grpc`)
     middlewares:
-    - name: ipwhitelist-privnets
+    - name: ipallowlist-privnets
     priority: 11
     services:
     - name: argocd-server
