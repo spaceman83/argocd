@@ -21,7 +21,7 @@ spec:
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
 metadata:
-  name: ipwallowlist-privnets
+  name: ipallowlist-privnets
 spec:
   ipAllowList:
     sourceRange:
