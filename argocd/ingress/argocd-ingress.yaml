@@ -37,7 +37,7 @@ spec:
     - name: argocd-server
       port: 80
   - kind: Rule
-    match: Host(`argocd.k8s.lenin.nu`) && Headers(`Content-Type`, `application/grpc`)
+    match: Host(`argocd.k8s.lenin.nu`) && Header(`Content-Type`, `application/grpc`)
     middlewares:
     - name: ipwhitelist-privnets
     priority: 11
