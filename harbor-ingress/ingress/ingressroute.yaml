@@ -15,7 +15,35 @@ spec:
     services:
     - name: harbor-portal
       port: 80
-  - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/api/`, `/service/`, `/v2/`, `/chartrepo/`, `/c/`)
+  - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/api/`)
+    kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
+    services:
+    - name: harbor-core
+      port: 80
+  - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/service/`)
+    kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
+    services:
+    - name: harbor-core
+      port: 80
+  - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/v2/`)
+    kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
+    services:
+    - name: harbor-core
+      port: 80
+  - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/chartrepo/`)
+    kind: Rule
+    middlewares:
+    - name: ipwhitelist-privnets
+    services:
+    - name: harbor-core
+      port: 80
+  - match: Host(`harbor.k8s.lenin.nu`) && PathPrefix(`/c/`)
     kind: Rule
     middlewares:
     - name: ipwhitelist-privnets
