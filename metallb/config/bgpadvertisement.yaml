@@ -11,4 +11,5 @@ spec:
   - pool05-mailsecret-bgp
   - pool06-sabbatsecret-bgp
   - pool07-zabbixproxy-bgp
+  - pool08-vrising-bgp
   aggregationLength: 32
