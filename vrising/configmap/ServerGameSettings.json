@@ -1,6 +1,6 @@
 {
     "GameDifficulty": "Normal",
-    "GameModeType": "PvP",
+    "GameModeType": "PvE",
     "CastleDamageMode": "Never",
     "SiegeWeaponHealth": "Normal",
     "PlayerDamageMode": "Always",
