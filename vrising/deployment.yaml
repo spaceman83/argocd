@@ -43,6 +43,11 @@ spec:
           - mountPath: /mnt/vrising/persistentdata/Settings/banlist.txt
             name: vrising-banlist
             subPath: banlist.txt
+        env:
+        - name: TZ
+          value: "Europe/Stockholm"
+        - name: SERVERNAME
+          value: "Lenin's house of pain"
       volumes:
         - name: vrising-server
           persistentVolumeClaim:
