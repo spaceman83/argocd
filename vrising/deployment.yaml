@@ -52,7 +52,7 @@ spec:
             claimName: vrising-persistentdata-pvc
         - name: vrising-serverhostsettings
           configMap:
-            name: vrising-servergamesettings
+            name: vrising-serverhostsettings
         - name: vrising-servergamesettings
           configMap:
             name: vrising-servergamesettings
