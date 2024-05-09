@@ -65,3 +65,13 @@ spec:
   addresses:
   - 192.168.201.23/32
   autoAssign: false
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool08-vrising-bgp
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.201.24/32
+  autoAssign: false

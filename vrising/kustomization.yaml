@@ -1,0 +1,17 @@
+namespace: vrising
+resources:
+ - deployment.yaml
+ - service.yaml
+ - pvc.yaml
+configMapGenerator:
+  - name: vrising-ServerHostSettings
+    files:
+    - configmap/ServerHostSettings.json
+  - name: vrising-ServerGameSettings
+    files:
+    - configmap/ServerGameSettings.json
+  - name: vrising-banlist
+    envs:
+    - configmap/banlist.txt
+generatorOptions:
+  disableNameSuffixHash: true

@@ -1,0 +1,29 @@
+{
+    "Name": "Lenin's House of Pain",
+    "Description": "",
+    "Port": 9876,
+    "QueryPort": 9877,
+    "MaxConnectedUsers": 6,
+    "MaxConnectedAdmins": 4,
+    "ServerFps": 30,
+    "SaveName": "world1",
+    "Password": "",
+    "Secure": true,
+    "ListOnSteam": true,
+    "ListOnEOS": false,
+    "AutoSaveCount": 20,
+    "AutoSaveInterval": 120,
+    "CompressSaveFiles": true,
+    "GameSettingsPreset": "",
+    "GameDifficultyPreset": "",
+    "AdminOnlyDebugEvents": true,
+    "DisableDebugEvents": false,
+    "API": {
+      "Enabled": false
+    },
+    "Rcon": {
+      "Enabled": false,
+      "Port": 25575,
+      "Password": ""
+    }
+  }
