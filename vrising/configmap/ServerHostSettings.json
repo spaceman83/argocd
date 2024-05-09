@@ -3,7 +3,7 @@
   "Description": "The house of pain, of Lenin",
   "Port": 9876,
   "QueryPort": 9877,
-  "MaxConnectedUsers": 40,
+  "MaxConnectedUsers": 6,
   "MaxConnectedAdmins": 4,
   "ServerFps": 30,
   "SaveName": "world1",
