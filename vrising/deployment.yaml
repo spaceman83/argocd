@@ -36,10 +36,13 @@ spec:
             name: vrising-persistentdata
           - mountPath: /mnt/vrising/persistentdata/Settings/ServerGameSettings.json
             name: vrising-servergamesettings
+            subPath: ServerGameSettings.json
           - mountPath: /mnt/vrising/persistentdata/Settings/ServerHostSettings.json
             name: vrising-serverhostsettings
+            subPath: ServerHostSettings.json
           - mountPath: /mnt/vrising/persistentdata/Settings/banlist.txt
             name: vrising-banlist
+            subPath: banlist.txt
       volumes:
         - name: vrising-server
           persistentVolumeClaim:
