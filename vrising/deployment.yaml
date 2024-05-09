@@ -2,9 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vrising-server
-  namespace: vrising
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: vrising-server
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: vrising-server
   containers:
   - name: vrising-server
     image: trueosiris/vrising
