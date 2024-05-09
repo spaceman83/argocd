@@ -28,9 +28,9 @@ spec:
       - mountPath: /mnt/vrising/persistentdata
         name: vrising-persistentdata
       - mountPath: /mnt/vrising/persistentdata/Settings/ServerGameSettings.json
-        name: vrising-ServerGameSettings
+        name: vrising-servergamesettings
       - mountPath: /mnt/vrising/persistentdata/Settings/ServerHostSettings.json
-        name: vrising-ServerHostSettings
+        name: vrising-servergostsettings
       - mountPath: /mnt/vrising/persistentdata/Settings/banlist.txt
         name: vrising-banlist
   volumes:
@@ -40,12 +40,12 @@ spec:
     - name: vrising-persistentdata
       persistentVolumeClaim:
         claimName: vrising-persistentdata-pvc
-    - name: vrising-ServerHostSettings
+    - name: vrising-serverhostsettings
       configMap:
         name: script-exporter-config
-    - name: vrising-ServerGameSettings
+    - name: vrising-servergamesettings
       configMap:
-        name: vrising-ServerGameSettings
+        name: vrising-servergamesettings
     - name: vrising-banlist
       configMap:
         name: vrising-banlist

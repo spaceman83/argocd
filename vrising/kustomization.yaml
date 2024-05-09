@@ -4,10 +4,10 @@ resources:
  - service.yaml
  - pvc.yaml
 configMapGenerator:
-  - name: vrising-ServerHostSettings
+  - name: vrising-serverhostsettings
     files:
     - configmap/ServerHostSettings.json
-  - name: vrising-ServerGameSettings
+  - name: vrising-servergamesettings
     files:
     - configmap/ServerGameSettings.json
   - name: vrising-banlist
