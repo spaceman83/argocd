@@ -10,7 +10,7 @@
     "Password": "",
     "Secure": true,
     "ListOnSteam": true,
-    "ListOnEOS": false,
+    "ListOnEOS": true,
     "AutoSaveCount": 20,
     "AutoSaveInterval": 600,
     "CompressSaveFiles": true,
