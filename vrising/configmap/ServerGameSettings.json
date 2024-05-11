@@ -42,7 +42,7 @@
   "SilverStrengthModifier": 1.0,
   "SunDamageModifier": 1.0,
   "CastleDecayRateModifier": 1.0,
-  "CastleBloodEssenceDrainModifier": 10.0,
+  "CastleBloodEssenceDrainModifier": 0.1,
   "CastleSiegeTimer": 420.0,
   "CastleUnderAttackTimer": 60.0,
   "CastleRaidTimer": 600.0,
