@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pgbouncer-exporter-01
-        image: prometheuscommunity/pgbouncer-exporter:v0.7.0
+        image: prometheuscommunity/pgbouncer-exporter:v0.8.0
         args: 
         - "--pgBouncer.connectionString=postgres://$(PG_USER)@192.168.103.11:6432/pgbouncer?sslmode=disable"
         ports:
@@ -49,7 +49,7 @@ spec:
     spec:
       containers:
       - name: pgbouncer-exporter-02
-        image: prometheuscommunity/pgbouncer-exporter:v0.7.0
+        image: prometheuscommunity/pgbouncer-exporter:v0.8.0
         args: 
         - "--pgBouncer.connectionString=postgres://$(PG_USER)@192.168.103.12:6432/pgbouncer?sslmode=disable"
         ports:
@@ -84,7 +84,7 @@ spec:
     spec:
       containers:
       - name: pgbouncer-exporter-03
-        image: prometheuscommunity/pgbouncer-exporter:v0.7.0
+        image: prometheuscommunity/pgbouncer-exporter:v0.8.0
         args: 
         - "--pgBouncer.connectionString=postgres://$(PG_USER)@192.168.103.13:6432/pgbouncer?sslmode=disable"
         ports:
