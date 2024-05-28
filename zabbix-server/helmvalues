@@ -1,0 +1,43 @@
+project: default
+source:
+  repoURL: 'https://cdn.zabbix.com/zabbix/integrations/kubernetes-helm/6.0'
+  targetRevision: 1.3.5
+  helm:
+    parameters:
+      - name: zabbixAgent.image.tag
+        value: alpine-6.0.30
+      - name: zabbixProxy.image.tag
+        value: alpine-6.0.30
+      - name: 'zabbixAgent.env[0].name'
+        value: ZBX_SERVER_HOST
+      - name: 'zabbixAgent.env[0].value'
+        value: 192.168.100.0/24
+      - name: 'zabbixProxy.env[0].name'
+        value: ZBX_PROXYMODE
+      - name: 'zabbixProxy.env[0].value'
+        value: '0'
+      - name: 'zabbixProxy.env[1].name'
+        value: ZBX_HOSTNAME
+      - name: 'zabbixProxy.env[1].value'
+        value: zabbix-proxy Kubernetes
+      - name: 'zabbixProxy.env[2].name'
+        value: ZBX_SERVER_HOST
+      - name: 'zabbixProxy.env[2].value'
+        value: zabbix-server-svc
+      - name: 'zabbixProxy.env[3].name'
+        value: ZBX_CACHESIZE
+      - name: 'zabbixProxy.env[3].value'
+        value: 32M
+      - name: zabbixProxy.service.type
+        value: LoadBalancer
+      - name: zabbixProxy.service.loadBalancerIP
+        value: 192.168.201.23
+      - name: 'zabbixAgent.tolerations[0].key'
+        value: node-role.kubernetes.io/master
+  chart: zabbix-helm-chrt
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: zabbix
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
