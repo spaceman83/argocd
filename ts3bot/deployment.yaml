@@ -5,7 +5,7 @@ metadata:
   annotations:
     another-autoscaler/start-time: "00-20 19 * * 4"
     another-autoscaler/start-replicas: "1"
-    another-autoscaler/stop-time: "59 23 * * 4"
+    another-autoscaler/stop-time: "50-59 23 * * 4"
     another-autoscaler/stop-replicas: "0"
 spec:
   selector:
