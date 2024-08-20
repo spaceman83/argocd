@@ -11,3 +11,4 @@ spec:
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
+  revisionHistoryLimit: 1
