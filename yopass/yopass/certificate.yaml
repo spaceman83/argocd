@@ -11,6 +11,7 @@ spec:
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
+  revisionHistoryLimit: 1
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
@@ -25,3 +26,4 @@ spec:
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
+  revisionHistoryLimit: 1
