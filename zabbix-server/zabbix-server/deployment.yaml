@@ -20,7 +20,7 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - k8s-worker-03
+                - k8s-worker-01
                 - k8s-worker-02
       containers:
       - name: zabbix-server
