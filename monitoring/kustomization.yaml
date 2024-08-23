@@ -18,6 +18,8 @@ resources:
   - exporters/script-exporter/service.yaml
   - exporters/pihole-exporter/deployment.yaml
   - exporters/pihole-exporter/service.yaml
+  - exporters/proxmox-exporter/deployment.yaml
+  - exporters/proxmox-exporter/service.yaml
 
 
 configMapGenerator:
