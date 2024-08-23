@@ -10,7 +10,7 @@ if [ "$ARGFILE" = "$COMPAREFILE" ]
 then
   sleep 1
 else
-  echo "File diff found, triggering prometheus reload"
+  echo "`date --rfc-3339=seconds` File diff found, triggering prometheus reload"
   md5sum "$1" > "$2"
   curl --no-progress-meter --insecure -X POST "$3"
 fi
