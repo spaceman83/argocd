@@ -29,9 +29,9 @@ spec:
           requests:
             cpu: 100m
             memory: 50Mi
-          env:
-          - name: --config.file
-            value: /etc/prometheus/pve.yml
+        env:
+        - name: --config.file
+          value: /etc/prometheus/pve.yml
       restartPolicy: Always
       volumes:
       - name: proxmox-exporter-conf
