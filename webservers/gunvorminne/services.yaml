@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gunvor-svc
+spec:
+  selector:
+    app.kubernetes.io/name: gunvor
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
