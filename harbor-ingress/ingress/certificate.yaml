@@ -11,17 +11,4 @@ spec:
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
-#---
-#apiVersion: cert-manager.io/v1
-#kind: Certificate
-#metadata: 
-#  name: cert-harbor-notary-k8s-lenin-nu
-#spec:
-#  dnsNames:
-#    - "harbor-notary.k8s.lenin.nu"
-#  secretName: secret-harbor-notary-k8s-lenin-nu
-#  issuerRef:
-#    name: letsencrypt-prod
-#    kind: ClusterIssuer
-#  privateKey:
-#    rotationPolicy: Always
+  revisionHistoryLimit: 1
