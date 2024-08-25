@@ -6,8 +6,8 @@ resources:
   - exporters/pgbouncer-exporter/service.yaml
   - exporters/postgres-exporter/deployment.yaml
   - exporters/postgres-exporter/service.yaml
-  - exporters/vcenter-exporter/deployment.yaml
-  - exporters/vcenter-exporter/service.yaml
+#  - exporters/vcenter-exporter/deployment.yaml
+#  - exporters/vcenter-exporter/service.yaml
   - exporters/snmp-exporter/deployment.yaml
   - exporters/snmp-exporter/service.yaml
   - exporters/node-exporter/deployment.yaml
