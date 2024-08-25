@@ -15,7 +15,6 @@ spec:
       services:
       - name: rook-ceph-mgr-dashboard
         port: 8080
-        namespace: rook-ceph
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -35,4 +34,3 @@ spec:
     services:
     - name: rook-ceph-mgr-dashboard
       port: 8080
-      namespace: rook-ceph
