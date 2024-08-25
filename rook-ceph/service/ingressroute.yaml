@@ -9,7 +9,7 @@ spec:
     - match: Host(`ceph.k8s.lenin.nu`)
       kind: Rule
       middlewares:
-      - name: httpsredirect
+#      - name: httpsredirect
       - name: ipwhitelist-privnets
       services:
       - name: rook-ceph-mgr-dashboard
