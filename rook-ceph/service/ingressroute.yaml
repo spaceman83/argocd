@@ -2,7 +2,6 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: cephdash-http
-  namespace: rook-ceph
 spec:
   entryPoints:
     - web
@@ -20,7 +19,6 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: cephdash-https
-  namespace: rook-ceph
 spec:
   entryPoints:
     - websecure
