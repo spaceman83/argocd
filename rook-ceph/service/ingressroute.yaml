@@ -11,6 +11,7 @@ spec:
       kind: Rule
       middlewares:
       - name: httpsredirect
+      - name: ipwhitelist-privnets
       services:
       - name: rook-ceph-mgr-dashboard
         port: 8080
