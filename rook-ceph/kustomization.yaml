@@ -12,4 +12,3 @@ resources:
   - service/ingressroute.yaml
   - service/middleware.yaml
   - service/certificate.yaml
-#  - addons/serviceaccount.yaml
