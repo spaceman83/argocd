@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - web
   routes:
-  - match: Host(`gunvor.lenin.nu`)
+  - match: Host(`gunvor.lindblad.net`)
     kind: Rule
     middlewares:
     - name: httpsredirect
@@ -22,9 +22,9 @@ spec:
   entryPoints:
     - websecure
   tls:
-    secretName: secret-gunvor-lenin-nu
+    secretName: secret-gunvor-lindblad.net
   routes:
-  - match: Host(`gunvor.lenin.nu`)
+  - match: Host(`gunvor.lindblad.net`)
     kind: Rule
     services:
     - name: gunvor-svc
