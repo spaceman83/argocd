@@ -271,10 +271,10 @@ spec:
           - name: "sdb"
       - name: "worker-02"
         devices:
-		  - name: "sdb"
-	  - name: "worker-03
-	    devices:
-		  - name: "sdb"
+          - name: "sdb"
+      - name: "worker-03
+	devices:
+	- name: "sdb"
     # when onlyApplyOSDPlacement is false, will merge both placement.All() and placement.osd
     onlyApplyOSDPlacement: false
     # Time for which an OSD pod will sleep before restarting, if it stopped due to flapping
