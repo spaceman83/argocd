@@ -29,7 +29,7 @@ spec:
           image: zabbix/zabbix-web-nginx-pgsql:7.0.3-alpine
           resources:
             limits:
-              cpu: 1
+              cpu: 500m
               memory: 512M
             requests:
               cpu: 100m
