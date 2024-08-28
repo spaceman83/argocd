@@ -31,10 +31,10 @@ spec:
         resources:    
           requests:
             cpu: 250m
-            memory: 500Mi
+            memory: 250Mi
           limits:
             cpu: 500m
-            memory: 1000Mi    
+            memory: 350Mi    
         envFrom:
         - secretRef:
             name: zabbixdb
