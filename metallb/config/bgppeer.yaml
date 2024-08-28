@@ -11,7 +11,7 @@ spec:
   - matchExpressions:
     - key: kubernetes.io/hostname
       operator: In
-      values: [k8s-worker-01, k8s-worker-02, k8s-worker-03]
+      values: [worker-01, worker-02, worker-03]
 ---
 apiVersion: metallb.io/v1beta2
 kind: BGPPeer
@@ -26,4 +26,4 @@ spec:
   - matchExpressions:
     - key: kubernetes.io/hostname
       operator: In
-      values: [k8s-worker-01, k8s-worker-02, k8s-worker-03]
+      values: [worker-01, worker-02, worker-03]
