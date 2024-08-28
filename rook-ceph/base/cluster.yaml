@@ -268,10 +268,10 @@ spec:
     nodes:
       - name: "worker-01"
         devices: 
-          - name: "sdb"
+        - name: "sdb"
       - name: "worker-02"
         devices:
-          - name: "sdb"
+        - name: "sdb"
       - name: "worker-03
 	devices:
 	- name: "sdb"
