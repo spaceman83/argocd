@@ -8,8 +8,8 @@ spec:
   - pool01-argocd
   nodeSelectors:
   - matchLabels:
-      kubernetes.io/hostname: k8s-worker-01
+      kubernetes.io/hostname: worker-01
   - matchLabels:
-      kubernetes.io/hostname: k8s-worker-02
+      kubernetes.io/hostname: worker-02
   - matchLabels:
-      kubernetes.io/hostname: k8s-worker-03
+      kubernetes.io/hostname: worker-03
