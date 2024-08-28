@@ -9,3 +9,18 @@ spec:
   ports:
     - name: zabbix-trapper
       port: 10051
+---
+kind: Service
+apiVersion: v1
+metadata: 
+  name: zabbix-server-lb-svc
+  annotations:
+    metallb.universe.tf/address-pool: pool09-zabbix-server
+spec:
+  selector:
+    app.kubernetes.io/name: zabbix-server
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+  ports:
+    - name: zabbix-trapper
+      port: 10051
