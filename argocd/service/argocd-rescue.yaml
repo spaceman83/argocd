@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/name: argocd-server
-  loadBalancerIP: 192.168.100.19
+  loadBalancerIP: 192.168.100.29
   ports:
     - name: http
       port: 80
