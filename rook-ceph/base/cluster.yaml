@@ -272,7 +272,7 @@ spec:
       - name: "worker-02"
         devices:
         - name: "sdb"
-      - name: "worker-03
+      - name: "worker-03"
 	devices:
 	- name: "sdb"
     # when onlyApplyOSDPlacement is false, will merge both placement.All() and placement.osd
