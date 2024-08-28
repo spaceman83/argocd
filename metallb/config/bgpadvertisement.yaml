@@ -12,4 +12,5 @@ spec:
   - pool06-sabbatsecret-bgp
   - pool07-zabbixproxy-bgp
   - pool08-vrising-bgp
+  - pool09-zabbix-server
   aggregationLength: 32

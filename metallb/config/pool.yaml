@@ -75,3 +75,13 @@ spec:
   addresses:
   - 192.168.201.24/32
   autoAssign: false
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool09-zabbix-server
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.201.25/32
+  autoAssign: false
