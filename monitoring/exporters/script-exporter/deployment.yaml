@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: script-exporter
-        image: ricoberger/script_exporter:v2.19.0
+        image: ricoberger/script_exporter:v2.22.0
         args:
           - "-config.file=/bin/config/config.yaml"
           - "-web.listen-address=:9469"
