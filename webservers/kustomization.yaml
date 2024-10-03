@@ -16,7 +16,8 @@ resources:
   - hello/deployment.yaml
   - hello/service.yaml
   - hello/ingressroute.yaml
-
+  - hello/certificate.yaml
+  
 configMapGenerator:
   - name: html-pravda-index
     files:
