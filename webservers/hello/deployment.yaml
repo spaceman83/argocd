@@ -12,7 +12,7 @@ spec:
         app.kubernetes.io/name: hello-world
     spec:
       containers:
-      - name: pravda
+      - name: hello-world
         image: nginxdemos/hello
         ports:
         - containerPort: 80
