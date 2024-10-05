@@ -13,6 +13,11 @@ resources:
   - gunvor/ingressroute.yaml
   - gunvor/certificate.yaml
 
+  - hello/deployment.yaml
+  - hello/service.yaml
+  - hello/ingressroute.yaml
+  - hello/certificate.yaml
+  
 configMapGenerator:
   - name: html-pravda-index
     files:
