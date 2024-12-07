@@ -57,8 +57,8 @@ spec:
             defaultMode: 420
             name: prometheus-server-conf-shortterm
         - name: prometheus-storage-volume
-          emptyDir:
-            sizeLimit: 800Mi
+          persistentVolumeClaim:
+            claimName: prometheus-shortterm-data-pvc
   revisionHistoryLimit: 1
 ---
 apiVersion: apps/v1

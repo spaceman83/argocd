@@ -11,3 +11,17 @@ spec:
   resources:
     requests:
       storage: 20G
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app.kubernetes.io/service: prometheus
+  name: prometheus-shortterm-data-pvc
+spec:
+  storageClassName: rook-ceph-block
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5G
