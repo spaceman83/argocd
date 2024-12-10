@@ -38,7 +38,7 @@ roleRef:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: sa-nextcloud-cron
+  name: sa-ts3bot-cron
 ---
 apiVersion: batch/v1
 kind: CronJob
