@@ -1,3 +1,4 @@
 namespace: ts3bot
 resources:
  - deployment.yaml
+ - cronjob.yaml

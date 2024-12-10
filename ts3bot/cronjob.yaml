@@ -1,0 +1,88 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ts3bot-cron-role
+rules:
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+   - pods
+  verbs:
+   - 'list'
+- apiGroups: 
+  - ""
+  resources: 
+   - deployments/scale
+  verbs: 
+   - update
+   - patch
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ts3bot-cron-rb
+subjects:
+- kind: ServiceAccount
+  name: sa-ts3bot-cron
+roleRef:
+  kind: Role
+  name: ts3bot-cron-role
+  apiGroup: ""
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sa-nextcloud-cron
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ts3bot-on-cron
+spec:
+  schedule: "0 21 * * 4"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: sa-ts3bot-cron
+          containers:
+          - name: ts3bot-on-cron
+            image: bitnami/kubectl:latest
+            command:
+            - /bin/sh
+            - -c
+            - kubectl -n ts3bot scale deployment ts3bot --replicas=1
+          restartPolicy: OnFailure
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ts3bot-off-cron
+spec:
+  schedule: "0 23 * * 4"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: sa-ts3bot-cron
+          containers:
+          - name: ts3bot-off-cron
+            image: bitnami/kubectl:latest
+            command:
+            - /bin/sh
+            - -c
+            - kubectl -n ts3bot scale deployment ts3bot --replicas=0
+          restartPolicy: OnFailure
+  
