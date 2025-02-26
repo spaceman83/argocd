@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: yopass
-        image: jhaals/yopass:11.16.0
+        image: jhaals/yopass:11.18.0
         args:
           - "--database=redis"
           - "--redis=redis://yopass-redis:6379/0"
