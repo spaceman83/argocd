@@ -47,7 +47,7 @@ metadata:
 spec:
   schedule: "0 20 * * 4"
   failedJobsHistoryLimit: 1
-  successfulJobsHistoryLimit: 3
+  successfulJobsHistoryLimit: 1
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
@@ -70,7 +70,7 @@ metadata:
 spec:
   schedule: "0 22 * * 4"
   failedJobsHistoryLimit: 1
-  successfulJobsHistoryLimit: 3
+  successfulJobsHistoryLimit: 1
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
