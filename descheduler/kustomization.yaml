@@ -1,0 +1,4 @@
+resources:
+ - base/configmap.yaml
+ - base/rbac.yaml
+ - deployment/deployment.yaml
