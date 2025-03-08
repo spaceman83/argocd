@@ -12,8 +12,8 @@ resources:
   - service/ingressroute.yaml
   - service/middleware.yaml
   - service/certificate.yaml
-#  - snapshot/pvc-clone.yaml
-#  - snapshot/pvc-restore.yaml
-#  - snapshot/pvc.yaml
-#  - snapshot/snapshot.yaml
-#  - snapshot/snapshotclass.yaml
+  - snapshot/pvc-clone.yaml
+  - snapshot/pvc-restore.yaml
+  - snapshot/pvc.yaml
+  - snapshot/snapshot.yaml
+  - snapshot/snapshotclass.yaml
