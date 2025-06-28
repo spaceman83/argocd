@@ -24,7 +24,7 @@ spec:
                 - worker-02
       containers:
       - name: zabbix-server
-        image: zabbix/zabbix-server-pgsql:7.0.15-alpine
+        image: zabbix/zabbix-server-pgsql:7.0.16-alpine
         ports:
         - name: zabbix-trapper
           containerPort: 10051
