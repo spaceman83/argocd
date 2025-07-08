@@ -460,7 +460,7 @@ velero:
     extraArgs: []
   
     # additional key/value pairs to be used as environment variables such as "AWS_CLUSTER_NAME: 'yourcluster.domain.tld'"
-    extraEnvVars: {}
+    extraEnvVars: []
   
     # Set true for backup all pod volumes without having to apply annotation on the pod when used file system backup Default: false.
     defaultVolumesToFsBackup:
