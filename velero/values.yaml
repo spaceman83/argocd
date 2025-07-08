@@ -97,6 +97,7 @@ velero:
     extraVolumeMounts: []
     # Extra key/value pairs to be used as environment variables. Optional.
     extraEnvVars: {}
+    automountServiceAccountToken: true
   
   
   # Configure the dnsPolicy of the Velero deployment
