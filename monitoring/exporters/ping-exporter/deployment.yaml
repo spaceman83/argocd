@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ping-exporter
-        image: czerwonk/ping_exporter:v1.1.3
+        image: harbor.k8s.lenin.nu/dh-mirror/czerwonk/ping_exporter:v1.1.3
         ports:
         - name: http
           containerPort: 9427

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: proxmox-exporter
-        image: prompve/prometheus-pve-exporter:3.4.3
+        image: harbor.k8s.lenin.nu/dh-mirror/prompve/prometheus-pve-exporter:3.4.3
         ports:
         - name: http
           containerPort: 9221

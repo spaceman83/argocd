@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: grafana
-        image: grafana/grafana:12.1.0
+        image: harbor.k8s.lenin.nu/dh-mirror/grafana/grafana:12.1.0
         ports:
         - name: grafana
           containerPort: 3000
