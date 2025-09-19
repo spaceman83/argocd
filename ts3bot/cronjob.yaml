@@ -57,7 +57,7 @@ spec:
           serviceAccountName: sa-ts3bot-cron
           containers:
           - name: ts3bot-on-cron
-            image: alpine/kubectl:latest
+            image: harbor.k8s.lenin.nu/dh-mirror/alpine/kubectl:latest
             command:
             - /bin/sh
             - -c
@@ -81,7 +81,7 @@ spec:
           serviceAccountName: sa-ts3bot-cron
           containers:
           - name: ts3bot-off-cron
-            image: alpine/kubectl:latest
+            image: harbor.k8s.lenin.nu/dh-mirror/alpine/kubectl:latest
             command:
             - /bin/sh
             - -c
