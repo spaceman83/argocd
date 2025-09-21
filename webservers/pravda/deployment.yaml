@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: pravda
-        image: nginx
+        image: harbor.k8s.lenin.nu/dh-mirror/nginx
         ports:
         - containerPort: 80
         volumeMounts:
