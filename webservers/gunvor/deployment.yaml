@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: gunvor
-        image: harbor.k8s.lenin.nu/webpages/gunvorminne:v0.10
+        image: harbor.k8s.lenin.nu/webpages/gunvorminne:v0.11
         ports:
         - containerPort: 80
         resources:
