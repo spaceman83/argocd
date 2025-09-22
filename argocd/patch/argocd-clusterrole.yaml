@@ -48,4 +48,4 @@ rules:
     resources:
       - jobs
     verbs:
-      - creae
+      - create
