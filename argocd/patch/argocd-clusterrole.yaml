@@ -41,11 +41,6 @@ rules:
       - ""
     resources:
       - pods/exec
-    verbs:
-      - create
-  - apigroups:
-      - 'batch'
-    resources:
       - jobs
     verbs:
       - create
