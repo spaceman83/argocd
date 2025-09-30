@@ -16,3 +16,5 @@ tlsStore:
   default:
     defaultCertificate:
       secretName: prod-k8s-lenin-nu-cert
+image:
+  tag: 3.5.5
