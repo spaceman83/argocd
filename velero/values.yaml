@@ -34,7 +34,7 @@ velero:
   # enabling node-agent). Required.
   image:
     repository: velero/velero
-    tag: v1.16.2
+    tag: v1.17.0
     # Digest value example: sha256:d238835e151cec91c6a811fe3a89a66d3231d9f64d09e5f3c49552672d271f38.
     # If used, it will take precedence over the image.tag.
     # digest:
@@ -445,14 +445,10 @@ velero:
     # Resource requests/limits to specify for the repository-maintenance job. Optional.
     # https://velero.io/docs/v1.14/repository-maintenance/#resource-limitation
     repositoryMaintenanceJob:
-      requests:
-      #   cpu: 500m
-      #   memory: 512Mi
-      limits:
-      #   cpu: 1000m
-      #   memory: 1024Mi
-      # Number of latest maintenance jobs to keep for each repository
-      latestJobsCount: 3
+      repositoryConfigData:
+        name: "velero-repo-maintenance"
+      global:
+        keepLatestMaintenanceJobs: 3
     # `velero server` default: velero
     namespace:
     # additional command-line arguments that will be passed to the `velero server`
