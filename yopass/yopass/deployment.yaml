@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: yopass
-        image: harbor.k8s.lenin.nu/dh-mirror/jhaals/yopass:12.3.0
+        image: harbor.k8s.lenin.nu/dh-mirror/jhaals/yopass:12.4.0
         args:
           - "--database=redis"
           - "--redis=redis://yopass-redis:6379/0"
