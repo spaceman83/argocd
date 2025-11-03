@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keel
+  labels:
+    app: keel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keel
+  template:
+    metadata:
+      labels:
+        app: keel
+    spec:
+      serviceAccountName: keel
+      containers:
+        - name: keel
+          image: keelhq/keel:0.20.0
+          imagePullPolicy: Always
+          command: ["/bin/keel"]
+          env:
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            # Basic auth (to enable UI/API)
+#            - name: BASIC_AUTH_USER
+#              value: uaser
+#            - name: BASIC_AUTH_PASSWORD
+#              value: password
+            # Enable MS Teams webhook endpoint
+#            - name: TEAMS_WEBHOOK_URL
+#              value: "{{ .teams_webhook_url }}"
+            # Enable insecure registries
+            - name: INSECURE_REGISTRY
+              value: "true"
+          ports:
+            - containerPort: 9300
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 9300
+            initialDelaySeconds: 30
+            timeoutSeconds: 10
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 50m
+              memory: 64Mi
+          volumeMounts:
+          - mountPath: /data
+            name: keel-data   # must match the name of the volume
+      # Provision a fresh volume for the pod
+      volumes:        
+        - name: keel-data
+          persistentVolumeClaim:
+            # This disk must already exist. Check Readme
+            claimName: keel-data
