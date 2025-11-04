@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: prometheus-shortterm
   namespace: tools
+  annotations:
+    keel.sh/policy: major
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 8h"
 spec:
   replicas: 1
   selector:
@@ -66,6 +70,10 @@ kind: Deployment
 metadata:
   name: prometheus
   namespace: tools
+  annotations:
+    keel.sh/policy: major
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 8h"
 spec:
   replicas: 1
   selector:

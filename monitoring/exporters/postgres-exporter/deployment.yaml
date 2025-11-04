@@ -2,6 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-exporter-01
+  annotations:
+    keel.sh/policy: major
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 8h"
 spec:
   replicas: 1
   selector:
@@ -35,6 +39,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-exporter-02
+  annotations:
+    keel.sh/policy: major
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 8h"
 spec:
   replicas: 1
   selector:
@@ -68,6 +76,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-exporter-03
+  annotations:
+    keel.sh/policy: major
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 8h"
 spec:
   replicas: 1
   selector:
