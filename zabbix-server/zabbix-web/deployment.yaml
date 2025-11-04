@@ -4,6 +4,10 @@ metadata:
   name: zabbix-web
   labels:
     app.kubernetes.io/name: zabbix-web
+  annotations:
+    keel.sh/policy: patch
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 8h"
 spec:
   replicas: 1
   selector:
