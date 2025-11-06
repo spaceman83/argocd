@@ -4,7 +4,8 @@ metadata:
   name: grafana
   namespace: tools
   annotations:
-    keel.sh/policy: major
+#    keel.sh/policy: major
+    keel.sh/policy: "regexp:^12.*-[0-9]*$"
     keel.sh/trigger: poll
     keel.sh/pollSchedule: "@every 8h"
 spec:
