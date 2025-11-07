@@ -8,6 +8,7 @@ metadata:
     keel.sh/policy: "regexp:^12.*-[0-9]*$"
     keel.sh/trigger: poll
     keel.sh/pollSchedule: "@every 8h"
+    keel.sh/monitorContainers: "^grafana"
 spec:
   replicas: 1
   selector:
