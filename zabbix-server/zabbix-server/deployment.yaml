@@ -38,7 +38,7 @@ spec:
             memory: 250Mi
           limits:
             cpu: 500m
-            memory: 350Mi    
+            memory: 750Mi    
         envFrom:
         - secretRef:
             name: zabbixdb
@@ -48,9 +48,9 @@ spec:
         - name: POSTGRES_USE_IMPLICIT_SEARCH_PATH
           value: "true"
         - name: ZBX_CACHESIZE
-          value: "64M" #default 8M
+          value: "128M" #default 8M
         - name: ZBX_TRENDCACHESIZE
-          value: "4M" #Default 4M
+          value: "8M" #Default 4M
         - name: ZBX_HISTORYCACHESIZE
           value: "16M" # Default 16M
         - name: ZBX_HISTORYINDEXCACHESIZE
