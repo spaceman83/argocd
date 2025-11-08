@@ -50,7 +50,7 @@ spec:
         - name: ZBX_CACHESIZE
           value: "128M" #default 8M
         - name: ZBX_TRENDCACHESIZE
-          value: "8M" #Default 4M
+          value: "16M" #Default 4M
         - name: ZBX_HISTORYCACHESIZE
           value: "16M" # Default 16M
         - name: ZBX_HISTORYINDEXCACHESIZE
