@@ -997,6 +997,16 @@ rules:
     verbs:
       - get
       - create
+  - apiGroups:
+      - discovery.k8s.io
+    resources: 
+      - endpointslices
+    verbs:
+      - list
+      - create
+      - delete
+      - update
+      - get
 ---
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
