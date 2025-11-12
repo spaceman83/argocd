@@ -1007,6 +1007,16 @@ rules:
       - delete
       - update
       - get
+  - apiGroups:
+      - monitoring.coreos.com
+    resources:
+      - servicemonitors
+    verbs:
+      - list
+      - create
+      - delete
+      - update
+      - get
 ---
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
