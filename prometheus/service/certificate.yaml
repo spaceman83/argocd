@@ -7,7 +7,7 @@ spec:
     - "prometheus.k8s.lenin.nu"
   secretName: secret-prometheus-k8s-lenin-nu
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-shortlived
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
@@ -22,7 +22,7 @@ spec:
     - "prometheus-shortterm.k8s.lenin.nu"
   secretName: secret-prometheus-shortterm-k8s-lenin-nu
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-shortlived
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
