@@ -7,7 +7,7 @@ spec:
     - "pravda.lenin.nu"
   secretName: secret-pravda-lenin-nu
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-shortlived
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always

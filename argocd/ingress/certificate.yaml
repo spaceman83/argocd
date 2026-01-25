@@ -7,7 +7,7 @@ spec:
     - "argocd.k8s.lenin.nu"
   secretName: secret-argocd-k8s-lenin-nu
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-shortlived
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always

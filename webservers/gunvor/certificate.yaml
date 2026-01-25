@@ -7,7 +7,7 @@ spec:
     - "gunvor.lindblad.net"
   secretName: secret-gunvor-lindblad.net
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-shortlived
     kind: ClusterIssuer
   privateKey:
     rotationPolicy: Always
