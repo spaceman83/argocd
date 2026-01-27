@@ -41,25 +41,18 @@ spec:
             cpu: 200m
         volumeMounts:
           - mountPath: /var/lib/grafana
-            name: grafana-storage
-          - mountPath: /var/lib/grafana2
             name: grafana-storage2
       initContainers:
       - name: change-ownership-container
         image: busybox
-        command: ["/bin/chmod","-R","777", "/var/lib/grafana2"]
+        command: ["/bin/chmod","-R","777", "/var/lib/grafana"]
         securityContext:
           runAsUser: 0
           privileged: true
         volumeMounts:
           - mountPath: /var/lib/grafana
-            name: grafana-storage
-          - mountPath: /var/lib/grafana2
             name: grafana-storage2
       volumes:
-        - name: grafana-storage
-          persistentVolumeClaim:
-            claimName: grafana-storage-pvc
         - name: grafana-storage2
           persistentVolumeClaim:
             claimName: grafana-storage-pvc2
