@@ -3,20 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   labels:
     app.kubernetes.io/service: grafana
-  name: grafana-storage-pvc
-spec:
-  storageClassName: rook-ceph-block
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10G
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  labels:
-    app.kubernetes.io/service: grafana
   name: grafana-storage-pvc2
 spec:
   storageClassName: rook-ceph-block
