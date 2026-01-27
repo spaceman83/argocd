@@ -43,7 +43,7 @@ spec:
           - mountPath: /var/lib/grafana
             name: grafana-storage
           - mountPath: /var/lib/grafana2
-            name: grafana-storage
+            name: grafana-storage2
 #      initContainers:
 #      - name: change-ownership-container
 #        image: busybox
