@@ -9,6 +9,7 @@ metadata:
     keel.sh/trigger: "poll"
     keel.sh/pollSchedule: "@every 8h"
     keel.sh/monitorContainers: "^grafana"
+    keel.sh/match-tag: "true"
 spec:
   replicas: 1
   revisionHistoryLimit: 3
