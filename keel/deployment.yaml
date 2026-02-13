@@ -54,9 +54,17 @@ spec:
           volumeMounts:
           - mountPath: /data
             name: keel-data   # must match the name of the volume
+      initContainers:
+        - name: set-permissions
+          image: busybox
+          command: [ "chown", "666:666", "/data", "-R"]
+          volumeMounts:
+          - mountPath: /data
+            name: keel-data   # must match the name of the volume
       # Provision a fresh volume for the pod
       volumes:        
         - name: keel-data
           persistentVolumeClaim:
             # This disk must already exist. Check Readme
             claimName: keel-data
+
