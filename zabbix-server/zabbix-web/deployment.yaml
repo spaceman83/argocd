@@ -30,7 +30,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"
       containers:
         - name: zabbix-web
-          image: harbor.k8s.lenin.nu/dh-mirror/zabbix/zabbix-web-nginx-pgsql:7.0.19-alpine
+          image: harbor.k8s.lenin.nu/dh-mirror/zabbix/zabbix-web-nginx-pgsql:7.0.24-alpine
           resources:
             limits:
               cpu: 500m
