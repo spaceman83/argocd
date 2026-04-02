@@ -71,9 +71,9 @@ spec:
     # serve the dashboard under a subpath (useful when you are accessing the dashboard via a reverse proxy)
     # urlPrefix: /ceph-dashboard
     # serve the dashboard at the given port.
-    # port: 8443
+    port: 8080
     # serve the dashboard using SSL
-    ssl: true
+    ssl: false
     # The url of the Prometheus instance
     # prometheusEndpoint: <protocol>://<prometheus-host>:<port>
     # Whether SSL should be verified if the Prometheus server is using https
@@ -262,8 +262,8 @@ spec:
     mgr: system-cluster-critical
     #crashcollector: rook-ceph-crashcollector-priority-class
   storage: # cluster level storage configuration and selection
-    useAllNodes: true
-    useAllDevices: true
+    useAllNodes: false
+    useAllDevices: false
     #deviceFilter:
     config:
       # crushRoot: "custom-root" # specify a non-default root label for the CRUSH map
@@ -298,7 +298,7 @@ spec:
     #     deviceFilter: "^sd."
     # Whether to always schedule OSD pods on nodes declared explicitly in the "nodes" section, even if they are
     # temporarily not schedulable. If set to true, consider adding placement tolerations for unschedulable nodes.
-    scheduleAlways: false
+    scheduleAlways: true
     # when onlyApplyOSDPlacement is false, will merge both placement.All() and placement.osd
     onlyApplyOSDPlacement: false
     # Time for which an OSD pod will sleep before restarting, if it stopped due to flapping
