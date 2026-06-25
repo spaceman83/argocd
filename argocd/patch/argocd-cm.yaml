@@ -19,3 +19,4 @@ data:
   exec.enabled: "true"
   exec.shells: "bash,sh,powershell,cmd"
   oidc.tls.insecure.skip.verify: "false"
+  kustomize.buildOptions: "--enable-helm"
