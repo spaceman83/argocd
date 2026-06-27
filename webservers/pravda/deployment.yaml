@@ -35,3 +35,4 @@ spec:
         - name: html
           configMap:
             name: html-pravda-index
+  revisionHistoryLimit: 1
