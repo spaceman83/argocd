@@ -21,6 +21,8 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: prometheus-shortterm
+      annotations:
+        backup.velero.io/backup-volumes-excludes: prometheus-storage-volume
     spec:
       containers:
         - name: prometheus-shortterm
