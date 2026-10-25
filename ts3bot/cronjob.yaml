@@ -45,8 +45,8 @@ kind: CronJob
 metadata:
   name: ts3bot-on-cron
 spec:
-  schedule: "30 19 * * 4" # DST
-#  schedule: "0 20 * * 4" # NON DST
+#  schedule: "30 19 * * 4" # DST
+  schedule: "0 20 * * 4" # NON DST
   failedJobsHistoryLimit: 1
   successfulJobsHistoryLimit: 1
   concurrencyPolicy: Forbid
@@ -69,8 +69,8 @@ kind: CronJob
 metadata:
   name: ts3bot-off-cron
 spec:
-  schedule: "0 0 * * 5" # DST
-#  schedule: "0 22 * * 4" # NON DST
+#  schedule: "0 0 * * 5" # DST
+  schedule: "0 22 * * 4" # NON DST
   failedJobsHistoryLimit: 1
   successfulJobsHistoryLimit: 1
   concurrencyPolicy: Forbid
